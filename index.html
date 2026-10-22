@@ -1,9 +1,4 @@
-<!doctype html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>우행옹 타이쿤</title>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>우해옹 타이쿤</title></head><body><title>우해옹 타이쿤</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jua&family=Do+Hyeon&family=VT323&display=swap">
@@ -39,7 +34,7 @@ button:focus-visible,select:focus-visible{outline:2px dashed var(--yolk);outline
 .btn.sm{padding:3px 7px;font-size:13px}
 
 /* header */
-.top{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;justify-content:space-between;background:var(--rock);border:3px solid var(--edge);box-shadow:4px 4px 0 #000;padding:8px 12px;position:relative}
+.top-old{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;justify-content:space-between;background:var(--rock);border:3px solid var(--edge);box-shadow:4px 4px 0 #000;padding:8px 12px;position:relative}
 .mini-logo{display:flex;flex-direction:column;line-height:1}
 .mini-logo small{color:var(--yolk);font-size:12px;letter-spacing:.08em}
 .mini-logo b{font-family:var(--f-logo);font-size:24px;color:var(--dough);text-shadow:2px 2px 0 var(--dough-sh),0 0 10px rgba(180,92,255,.35);font-weight:400}
@@ -60,6 +55,39 @@ button:focus-visible,select:focus-visible{outline:2px dashed var(--yolk);outline
 .speed .btn.on{background:var(--yolk);color:#1b0b07;border-color:#fff3c0}
 
 /* main grid */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;display:flex;align-items:center;gap:8px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;background:var(--rock);border:3px solid var(--edge);box-shadow:4px 4px 0 #000;padding:5px 8px 7px;height:46px}
+.top::-webkit-scrollbar{display:none}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:31;background:var(--void)}
+.clk{display:flex;align-items:baseline;gap:4px;white-space:nowrap}
+.clk b{font-weight:400;font-size:24px}.clk small{font-size:12px;color:var(--muted)}
+.cash{font-size:20px;color:var(--yolk);white-space:nowrap}.cash.neg{color:var(--danger)}
+.darkm{font-size:20px;color:var(--toxic);white-space:nowrap}.darkm b{font-weight:400}
+.tl{position:absolute;left:0;right:0;bottom:0;height:3px;background:#0b070c;display:block}
+.tl i{position:absolute;inset:0 auto 0 0;background:var(--yolk);display:block}
+.tl em{position:absolute;inset:0 0 0 auto;width:2.7%;background:var(--toxic)}
+.btn.xs{padding:2px 7px;font-size:13px;border-width:2px;box-shadow:2px 2px 0 #000;min-width:28px}
+.speed{display:flex;gap:3px;margin-left:auto}
+.speed .btn.on{background:var(--yolk);color:#1b0b07;border-color:#fff3c0}
+.menu-b{position:relative}.menu-b.new::after{content:"";position:absolute;right:-3px;top:-3px;width:8px;height:8px;background:var(--yolk);box-shadow:0 0 4px var(--yolk)}
+.sp-cyc{display:none;margin-left:auto;min-width:40px}
+.book-b{padding:1px 4px}.book-b img{width:22px;height:18px;display:block}
+.htabs{display:flex;gap:4px}.htabs .btn{flex:1}.htabs .btn.on{background:var(--yolk);color:#1b0b07;border-color:#fff3c0}
+.tut{display:grid;grid-template-columns:22px 1fr;gap:6px;align-items:start;font-size:14px;line-height:1.45}.tut i{font-style:normal;font-family:var(--f-num);font-size:18px}.tut.done{color:var(--muted)}.tut.done i{color:var(--ok)}
+.coachpop{position:fixed;left:max(16px,env(safe-area-inset-left,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:44;width:min(360px,calc(100vw - 32px));background:#2a1f0c;border:3px solid var(--yolk);box-shadow:4px 4px 0 #000;padding:10px 12px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.45;animation:fade .3s steps(4)}
+.coachpop b{color:var(--yolk);font-weight:400}.coachpop p{margin:0}
+.minis{display:flex;gap:6px;flex-wrap:nowrap;flex:none}
+.mini-b{position:relative;display:grid;grid-template-columns:auto auto;gap:2px 6px;align-items:center;background:#0f0a10;border:2px solid var(--edge);padding:2px 6px 3px;cursor:pointer;text-align:left;color:var(--text);flex:none}
+.mini-b small{font-size:11.5px;white-space:nowrap;max-width:150px;overflow:hidden;text-overflow:ellipsis}
+@media (max-width:1100px){.mini-b small{display:none}.mini-b{grid-template-columns:auto}}
+.mini-b:hover{border-color:var(--yolk)}
+.mm{width:32px;height:16px}
+.mm.idle{opacity:.35}.mm.flip{transform:scaleX(-1)}.mm.go{animation:hover .6s steps(2) infinite}.mm.flip.go{animation:hoverf .6s steps(2) infinite}
+.mini-t{display:flex;flex-direction:column;min-width:0;line-height:1.15}
+.mini-t b{font-weight:400;font-size:12.5px;color:var(--muted)}
+.mini-t small{font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mbar{grid-column:1/-1;height:3px;background:#2a1a22;display:block}
+.mbar i{display:block;height:100%;width:0;background:var(--yolk);transition:width .3s linear}
+.mini-b .coin{left:22px;top:-6px}
 .routes{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
 .lane{background:var(--rock);border:3px solid var(--edge);box-shadow:4px 4px 0 #000;padding:6px 12px 4px;cursor:pointer;min-width:0}
 .lane:hover{border-color:var(--edge2)}
@@ -80,9 +108,50 @@ button:focus-visible,select:focus-visible{outline:2px dashed var(--yolk);outline
 @keyframes coin{0%{opacity:1;transform:translateY(6px)}100%{opacity:0;transform:translateY(-12px)}}
 @media (max-width:700px){.routes{grid-template-columns:minmax(0,1fr)}}
 .floor{display:grid;gap:14px;margin-top:14px;align-items:start}
-#viewTank{grid-template-columns:minmax(0,1fr) 280px;grid-template-areas:"center side"}
-#viewKit{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"kraw right"}
-#center{grid-area:center;min-width:0}#side{grid-area:side}#kraw{grid-area:kraw}#right{grid-area:right}
+.room-deco{grid-area:deco}
+#viewTank{grid-template-columns:minmax(0,1fr);grid-template-areas:"center";padding-top:0}
+#viewKit{grid-template-columns:minmax(0,1fr);grid-template-areas:"deco" "ktools" "kscene"}
+#center{grid-area:center;min-width:0;padding-top:14px}#side{grid-area:side}
+.room{padding:14px;padding-top:0;border:3px solid var(--edge);box-shadow:4px 4px 0 #000;background-color:var(--room-bg);background-image:var(--tile);background-size:32px 32px;image-rendering:pixelated}
+.room-deco{grid-area:deco;position:relative;height:74px;margin:0 -14px;border-bottom:4px solid var(--shelf);background:linear-gradient(180deg,transparent 0 58px,var(--shelf-top) 58px 64px,var(--shelf) 64px)}
+.rd-label{position:absolute;left:14px;top:8px;font-size:13px;letter-spacing:.06em;color:var(--room-label);background:rgba(0,0,0,.35);padding:2px 8px}
+.rd{position:absolute;bottom:16px;background-size:100% 100%;image-rendering:pixelated}
+.lab{--room-bg:#0f1a21;--shelf:#3b4a52;--shelf-top:#5f7480;--room-label:#9ff5ec;border-color:#2c4a55}
+.kitchen{--room-bg:#151c23;--shelf:#2c3742;--shelf-top:#4b5966;--room-label:#ffb347;border-color:#3b4a57}
+.lab-deco .monitor{right:24px;width:56px;height:40px;animation:flick 1.6s steps(2) infinite}
+.lab-deco .monitor.m2{right:auto;left:46%;width:42px;height:30px;animation-delay:.5s}
+.lab-deco .micro{right:96px;width:30px;height:36px}
+.lab-deco .flask{width:20px;height:25px}
+.lab-deco .f1{right:140px}.lab-deco .f2{right:168px;height:30px;width:24px}.lab-deco .f3{right:200px}
+.lab-deco .flask::after{content:"";position:absolute;left:40%;top:-8px;width:4px;height:4px;background:rgba(159,245,236,.7);animation:steam 1.4s steps(4) infinite}
+.kit-deco .ladle,.kit-deco .whisk{top:0;bottom:auto;width:18px;height:48px;transform-origin:50% 0;animation:swing 2.6s ease-in-out infinite}
+.kit-deco .ladle{right:40px}.kit-deco .whisk{right:70px;animation-delay:.6s}.kit-deco .ladle.l2{right:100px;height:40px;animation-delay:1.2s}
+@keyframes swing{50%{transform:rotate(6deg)}}
+.kit-deco{background:linear-gradient(180deg,#1b232b 0 54px,#4b5966 54px 58px,#2c3742 58px)}
+.porthole{position:absolute;left:38%;top:8px;width:46px;height:46px;border-radius:50%;border:5px solid #4b5966;box-shadow:inset 0 0 0 2px #121820,0 0 0 2px #121820;background:radial-gradient(circle at 30% 30%,#fff 0 1px,transparent 1.5px),radial-gradient(circle at 70% 60%,#fff 0 1px,transparent 1.5px),radial-gradient(circle at 50% 80%,#cfe 0 1px,transparent 1.5px),#05060c;overflow:hidden}
+.porthole.p2{left:calc(38% + 62px)}
+.porthole .mars{position:absolute;right:-8px;bottom:-8px;width:30px;height:30px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#f08a5d,#b4432a 60%,#5a1f16);animation:spin 40s linear infinite}
+.porthole .sat{position:absolute;left:-10px;top:14px;width:10px;height:4px;background:#c9cfd6;box-shadow:-6px 0 0 #7ee3d9,6px 0 0 #7ee3d9;animation:drift 9s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}@keyframes drift{to{transform:translateX(70px)}}
+.lightbar{position:absolute;left:14px;right:14px;top:0;height:3px;background:repeating-linear-gradient(90deg,#ffb347 0 40px,transparent 40px 60px);opacity:.7}
+.magstrip{position:absolute;right:28px;top:4px;width:100px;height:6px;background:#4b5966;border:1px solid #121820}
+.airlock{position:absolute;left:14px;bottom:2px;width:46px;height:20px;background:repeating-linear-gradient(135deg,#ffb347 0 6px,#1b232b 6px 12px);border:2px solid #121820}
+.lab .card{background:#13232b;border-color:#2c4a55}
+.lab .tank{background:#16262e;border-color:#3b5562}.lab .tank-h{background:#1d323c;border-color:#3b5562}
+.kitchen .card{background:#1e2730;border-color:#3b4a57}
+.kitchen .menu{background:#1f2a22;border:6px solid #6b4226;box-shadow:4px 4px 0 #000,inset 0 0 0 2px #2c3a30;color:#e8efe2}
+.kitchen .menu .card-h{font-family:var(--f-logo);color:#f6e2c0}
+.kitchen .menu .muted{color:#a9b8a4}
+.stove{display:flex;justify-content:center;gap:16px;background:#1b1418;border-top:4px solid #3b3f47;padding:4px}
+.stove i{width:10px;height:10px;border-radius:50%;background:#3b3f47;box-shadow:inset 0 0 0 2px #5a5f69}
+.stove i.on{background:var(--mars);box-shadow:0 0 6px var(--mars)}
+.tank-h .led{width:8px;height:8px;display:inline-block;margin-right:6px;background:var(--danger);box-shadow:0 0 5px var(--danger);vertical-align:middle}
+.tank-h .led.on{background:var(--ok);box-shadow:0 0 5px var(--ok)}
+.feeder{position:absolute;top:0;left:50%;width:10px;height:14px;margin-left:-5px;background:#5f7480;border:2px solid #2c3a42;border-top:0;z-index:1;pointer-events:none}
+.feeder i{position:absolute;left:1px;top:10px;width:4px;height:4px;background:var(--fc);opacity:0}
+.feeder.on i{animation:feed 2.4s steps(12) infinite}.feeder.on i:nth-child(2){animation-delay:1.2s;left:3px}
+@keyframes feed{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(120px)}}
+.flyong{position:fixed;width:24px;height:24px;z-index:46;pointer-events:none;image-rendering:pixelated}
 .tabs{display:flex;gap:8px;margin-top:14px}
 .tab{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:10px 12px;font-size:16px;background:var(--rock);border:3px solid var(--edge);box-shadow:4px 4px 0 #000;cursor:pointer}
 .tab.on{background:var(--rock2);border-color:var(--yolk);color:var(--yolk)}
@@ -144,7 +213,7 @@ body.fr1 .raw-j{background-image:var(--f1)}
 .water.target{border-color:var(--yolk);box-shadow:inset 0 0 0 3px rgba(255,207,63,.25)}
 .bubble{position:absolute;bottom:-6px;width:4px;height:4px;background:rgba(126,227,217,.5);animation:rise linear infinite;pointer-events:none}
 @keyframes rise{to{transform:translateY(-280px)}}
-.jelly{position:absolute;left:0;top:0;width:40px;height:56px;background-image:var(--f0);background-size:100% 100%;image-rendering:pixelated;cursor:grab;touch-action:none;will-change:transform}
+.jelly{position:absolute;left:0;top:0;width:40px;height:56px;background-image:var(--f0);background-size:100% 100%;image-rendering:pixelated;cursor:pointer;will-change:transform}
 body.fr1 .jelly{background-image:var(--f1)}
 .jelly.dyeing{filter:drop-shadow(0 0 5px var(--dye)) drop-shadow(0 0 2px var(--dye));animation:dye 1s steps(2) infinite}
 @keyframes dye{50%{filter:drop-shadow(0 0 1px var(--dye))}}
@@ -181,6 +250,172 @@ body.fr1 .tj{background-image:var(--f1)}
 .hunt-count i{width:16px;height:22px;background-size:100% 100%;image-rendering:pixelated;display:inline-block}
 #huntCv{width:100%;height:auto;image-rendering:pixelated;border:3px solid var(--edge2);box-shadow:4px 4px 0 #000;touch-action:none;background:#1a1018}
 #huntEnd{background:var(--rock);border:3px solid var(--yolk);padding:12px;display:flex;flex-direction:column;gap:8px}
+.rep{display:grid;grid-template-columns:24px 1fr;gap:8px;align-items:center;font-size:14px;line-height:1.4}
+.rep-i{width:22px;height:31px;background-image:var(--f0);background-size:100% 100%;image-rendering:pixelated}
+.rep-i.warn{background:none;color:var(--danger);font-family:var(--f-num);font-size:22px;text-align:center;height:auto}
+.rep.bad{color:#ffb3bc}.rep.hyb{color:#e2c4ff}
+.loadbar{height:8px;background:#0f0a10;border:2px solid var(--edge)}.loadbar i{display:block;height:100%;background:var(--yolk)}
+.trow .it small{display:block;margin-top:1px}
+.crow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:center;font-size:14px}
+.crow .it>span{min-width:0}
+.stp{display:inline-flex;align-items:center;gap:4px}.stp b{font-weight:400;min-width:2ch;text-align:center;font-size:20px}
+.stp .btn.xs{min-width:28px;font-size:16px;padding:1px 6px}
+.cart-sum{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;border-top:2px dashed var(--edge2);padding-top:6px;font-size:14px}
+.cart-sum b{font-weight:400}
+.mini-sp{width:20px;height:28px;flex:none;background-size:100% 100%;image-rendering:pixelated;display:inline-block}
+.labmap{position:relative;overflow:auto;max-height:min(74vh,1000px);border:3px solid #2c4a55;background:#0b141a var(--tile);background-size:32px 32px;cursor:grab;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+.labmap.panning{cursor:grabbing;user-select:none}
+.map-inner{margin:0 auto;position:relative;background-color:#0f1a21;background-image:var(--tile);background-size:32px 32px;image-rendering:pixelated}
+.mwall{position:absolute;left:0;right:0;top:0;background:linear-gradient(180deg,#1d3340,#16262e 70%,#3b4a52 70%,#5f7480 76%,#3b4a52 76%)}
+.mwall .rd{bottom:26%}.mwall .monitor{width:56px;height:40px}.mwall .monitor.m2{width:42px;height:30px}.mwall .micro{width:30px;height:36px}.mwall .flask{width:20px;height:25px}
+.mcab{position:absolute;bottom:26%;width:80px;height:66px;background-size:100% 100%;image-rendering:pixelated}
+.wall-sign{position:absolute;right:16px;top:10px;font-size:12px;color:#9ff5ec;background:rgba(0,0,0,.4);padding:2px 8px;letter-spacing:.05em}
+.rowlbl{position:absolute;left:8px;font-style:normal;font-family:var(--f-num);font-size:26px;color:#3b5562}
+.pipe{position:absolute;left:30px;height:8px;background:linear-gradient(180deg,#5f7480,#3b4a52);border-top:2px solid #7d93a0;opacity:.7}
+.mcell{position:absolute;border:3px dashed #2c4a55;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;color:#5f7480;font-size:13px;cursor:pointer;background:rgba(18,32,42,.5)}
+.mcell b{font-weight:400;font-size:14px;color:#9ab}
+.mcell.lock{border-style:solid;border-color:#1d2a31;background:repeating-linear-gradient(45deg,#101a20 0 14px,#16232a 14px 28px);color:#4b5d66}
+.mcell.lock b{color:var(--yolk)}
+.tank.mapt{position:absolute;box-shadow:4px 6px 0 rgba(0,0,0,.6),0 18px 30px rgba(126,227,217,.08)}
+.tank-hr{display:flex;align-items:center;gap:6px}
+.hatch{position:absolute;display:flex;align-items:center;gap:8px;background:#0b070c;border:3px solid #5a3a46;padding:6px 10px 6px 6px;cursor:pointer;color:var(--yolk);font-size:13px;box-shadow:inset 0 0 12px #000}
+.hatch i{width:44px;height:30px;background:radial-gradient(ellipse at 50% 60%,#000 0 45%,#2a1a24 46% 60%,#3b2630 61%);border:2px solid #24161e;box-shadow:0 0 10px rgba(180,92,255,.35)}
+.hatch:hover{border-color:var(--yolk)}.hatch.done{color:var(--muted);opacity:.6;cursor:default}
+.robot{position:absolute;left:30px;width:30px;height:30px;background-size:100% 100%;image-rendering:pixelated;animation:patrol 18s linear infinite}
+@keyframes patrol{0%{transform:translateX(0)}48%{transform:translateX(var(--w))}50%{transform:translateX(var(--w)) scaleX(-1)}98%{transform:translateX(0) scaleX(-1)}100%{transform:translateX(0)}}
+.drain{position:absolute;width:28px;height:16px;background:repeating-linear-gradient(90deg,#1d2a31 0 3px,#3b4a52 3px 6px);border:2px solid #2c3a42}
+.map-tools{display:flex;gap:4px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.lgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+.lcell{min-height:52px;border:2px dashed var(--edge2);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--muted);cursor:pointer;background:#0f0a10}
+.lcell.lock{border-style:solid;background:repeating-linear-gradient(45deg,#160d14 0 8px,#1e1219 8px 16px);cursor:default}
+.lcell.ok{border-color:var(--ok);border-style:solid;color:var(--ok)}
+.ltank{min-height:52px;border:2px solid var(--glass);background:#16262e;color:var(--text);display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:12px;cursor:pointer;line-height:1.2;text-align:center}
+.ltank.sel{border-color:var(--yolk);box-shadow:0 0 0 2px var(--yolk)}
+.spick{display:flex;flex-wrap:wrap;gap:6px;padding:6px;border:2px solid var(--edge2);background:#0f0a10;max-height:180px;overflow:auto}
+.spick button{width:38px;height:52px;border:2px solid transparent;background-color:transparent;background-image:var(--f0);background-size:100% 100%;image-rendering:pixelated;cursor:pointer}
+.spick button.on{border-color:var(--yolk);background-color:rgba(255,207,63,.15)}
+.dest{display:flex;flex-wrap:wrap;gap:6px}.dest .btn.on{background:var(--yolk);color:#1b0b07;border-color:#fff3c0}
+.feedchip{display:flex;align-items:center;gap:6px;width:100%;justify-content:flex-start;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.feedchip .dot{width:9px;height:9px;flex:none;background:var(--danger);box-shadow:0 0 5px var(--danger)}.feedchip.on .dot{background:var(--ok);box-shadow:0 0 5px var(--ok)}
+.frow{display:flex;flex-direction:column;gap:5px;padding:8px;border:2px solid var(--edge2);background:#0f0a10}
+.frow-h{display:flex;justify-content:space-between;align-items:center;gap:6px;font-size:14px}
+.fcubes{display:flex;gap:4px;flex-wrap:wrap}
+.fcubes .btn{display:inline-flex;align-items:center;gap:4px}.fcubes .btn.on{background:var(--yolk);color:#1b0b07;border-color:#fff3c0}
+.fsum{display:grid;grid-template-columns:1fr auto auto;gap:4px 10px;font-size:13.5px;align-items:center}
+.fsum .warn{color:var(--danger)}
+.ktools{grid-area:ktools;display:flex;gap:6px;flex-wrap:wrap;align-items:center;padding-top:12px}
+.ktools .grow{flex:1}
+.kscene{grid-area:kscene;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:12px;padding-bottom:4px}
+.kscene .kzone{height:clamp(240px,42vh,380px)}
+.kz-body{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain}
+.kzone{position:relative;background:#1e2730;border:3px solid #3b4a57;box-shadow:4px 4px 0 #000,inset 0 3px 0 #2a3540;padding:10px 12px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.kzone::before{content:"";position:absolute;left:10px;right:10px;top:-3px;height:3px;background:var(--glass);opacity:.5}
+.kz-shelf::before{background:#ffb347}
+.kzone h3{margin:0;font-weight:400;font-size:16px;display:flex;justify-content:space-between;align-items:center}
+.kz-pot{background:linear-gradient(180deg,#1e2730,#18212a)}
+.kz-pot::before{background:#ffb347}
+.station{display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;align-items:center}
+.hob{position:relative;display:flex;flex-direction:column;align-items:center;gap:6px;padding:8px 10px 6px;background:#121820;border:2px solid #2c3742}
+.hob .plate{width:120px;height:12px;border-radius:50%;background:radial-gradient(ellipse,#2c3742 0 55%,#1b232b 56%);box-shadow:0 0 0 2px #0b0f14}
+.hob.on .plate{background:radial-gradient(ellipse,#ffb347 0 20%,#ec6a3c 21% 40%,#5a2a1a 41% 55%,#1b232b 56%);box-shadow:0 0 14px #ec6a3c}
+.hob .lbl{font-family:var(--f-num);font-size:14px;color:#9ab}
+.stages{display:flex;flex-direction:column;gap:6px}
+.stage{display:grid;grid-template-columns:22px 26px minmax(0,1fr) auto;gap:8px;align-items:center;padding:6px 8px;background:#121820;border:2px solid #2c3742;font-size:13px;position:relative;overflow:hidden}
+.stage .no{font-family:var(--f-num);font-size:16px;color:#5f7480}
+.stage.busy{border-color:#ffb347}.stage.busy .no{color:#ffb347}
+.stage .bar{position:absolute;left:0;bottom:0;height:3px;background:linear-gradient(90deg,#ffb347,#ec6a3c)}
+.stage .sn{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.stage .eta{white-space:nowrap;font-family:var(--f-num);font-size:15px;color:#9ab}
+.kz-pot{padding:10px}
+.hob{padding:6px;gap:2px;justify-content:center;align-self:center}
+.hob .cauldron,.hob .pot-img{width:64px;height:46px}
+.hob .plate{width:66px;height:8px}
+.hob small{font-family:var(--f-num);font-size:14px;color:#9ab}
+.stages{display:flex;flex-direction:column;gap:5px}
+.stage{display:grid;grid-template-columns:22px minmax(0,1fr) auto;gap:6px;align-items:center;padding:5px 6px;min-height:0}
+.stage .no{position:absolute;left:4px;top:2px;font-size:13px}
+.stage .ong-img{width:22px;height:22px}
+.stage .sn{font-size:12px}
+.stage .eta{font-size:16px;color:#ffb347}
+.capsules{display:flex;flex-wrap:wrap;gap:8px;min-height:64px;align-items:flex-end}
+.cap{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:11.5px;min-width:54px}
+.cap .pod{width:42px;height:50px;border-radius:12px 12px 6px 6px;border:2px solid #7ee3d9;background:linear-gradient(180deg,rgba(126,227,217,.16),rgba(126,227,217,.04));display:flex;flex-wrap:wrap;align-content:flex-end;justify-content:center;gap:1px;padding:3px;box-shadow:inset 0 0 8px rgba(126,227,217,.2)}
+.cap .pod img{width:14px;height:14px;image-rendering:pixelated}
+.cap.ban .pod{border-color:var(--toxic);box-shadow:inset 0 0 8px rgba(180,92,255,.3)}
+.cap b{font-weight:400;font-family:var(--f-num);font-size:17px}
+.kz-tray .rawbin{background:linear-gradient(180deg,rgba(126,227,217,.08),rgba(126,227,217,.02)),repeating-linear-gradient(90deg,#141b22 0 10px,#18212a 10px 20px);border-color:#3b4a57}
+.kz-pot .pot-big{display:flex;justify-content:center;position:relative;padding-top:10px}
+.kz-pot .pot-big .cauldron{width:132px;height:96px}.kz-pot .pot-big .pot-img{width:132px;height:96px}
+.kz-pot .pot-big .steam{top:-2px}
+.counter{border-top:6px solid #8a5a33;background:#5a3520;height:10px;margin:0 -12px -10px}
+.shelf{display:flex;flex-wrap:wrap;gap:8px;padding:8px;background:linear-gradient(180deg,transparent 0 calc(100% - 8px),#8a5a33 calc(100% - 8px));min-height:64px;align-items:flex-end}
+.ongchip{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:11.5px;min-width:52px}
+.ongchip .jarb{width:40px;height:44px;border:2px solid #e9dcc4;border-top:6px solid #a0522d;background:rgba(233,220,196,.12);display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:1px;padding:2px}
+.ongchip .jarb img{width:14px;height:14px;image-rendering:pixelated}
+.ongchip b{font-weight:400;font-family:var(--f-num);font-size:17px}
+.ongchip.ban .jarb{border-color:var(--toxic)}
+@media (max-width:560px){.porthole{left:auto;right:16px}.porthole.p2,.magstrip,.kit-deco .rd{display:none}.kscene{gap:6px}.kscene .kzone{padding:8px 6px;height:clamp(260px,52vh,420px)}.kzone h3{font-size:13px;flex-wrap:wrap;gap:2px}.raw-j{width:30px;height:42px}.rawbin{padding:4px;gap:3px}.stage{grid-template-columns:18px minmax(0,1fr);}.stage .eta{grid-column:1/-1;text-align:center;font-size:14px}.cap{min-width:40px}.cap .pod{width:34px;height:40px}.kscene .btn.hot{font-size:12px;padding:5px 4px}.kscene .btn .lg{display:none}.hob .cauldron,.hob .pot-img{width:52px;height:38px}.hob .plate{width:54px}}
+.kscene{display:flex!important;flex-direction:column;gap:0!important;padding-top:10px}
+.cline{display:grid;grid-template-columns:92px minmax(0,1fr) 92px;gap:10px;align-items:end;padding:10px 8px 0}
+.cbar{height:16px;background:linear-gradient(180deg,#4b5966 0 4px,#2c3742 4px);border:2px solid #121820;border-top:0;margin:0 -2px}
+.khint{margin:8px 0 0;min-height:1.2em;font-size:13px}
+.fridge,.caps{align-self:stretch;background:#1e2730;border:3px solid #3b4a57;display:flex;flex-direction:column;min-height:150px;max-height:220px}
+.fridge{border-color:#7ee3d9;box-shadow:inset 0 0 12px rgba(126,227,217,.15)}
+.caps{border-color:#ffb347}
+.caps.dropok{box-shadow:0 0 0 3px var(--ok)}.caps.dropover{background:#22382a}
+.dev-h{display:flex;justify-content:space-between;align-items:center;padding:3px 6px;font-size:12px;background:#121820;color:#9ab}
+.dev-h b{font-weight:400;font-size:18px;color:var(--text)}
+.fr-in,.cap-in{flex:1;overflow-y:auto;display:flex;flex-wrap:wrap;align-content:flex-start;gap:3px;padding:5px}
+.raw-d{width:30px;height:42px;background-image:var(--f0);background-size:100% 100%;image-rendering:pixelated;cursor:grab;touch-action:none;display:inline-block}
+body.fr1 .raw-d{background-image:var(--f1)}
+.raw-d.dragging{opacity:.3}
+.capm{display:flex;align-items:center;gap:2px;font-family:var(--f-num);font-size:15px;padding:1px 3px;border:1px solid #3b4a57}
+.capm img{width:16px;height:16px;image-rendering:pixelated}.capm.ban{border-color:var(--toxic)}
+.pots{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;align-items:end}
+.pot-st{position:relative;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 2px 4px;border:2px dashed transparent}
+.pot-st.dropok{border-color:var(--ok);background:rgba(123,227,129,.06)}.pot-st.dropover{background:rgba(123,227,129,.18)}
+.pot-st .pimg{width:clamp(64px,9vw,120px);max-width:100%;height:auto;aspect-ratio:22/16}
+.pot-st .ring{width:clamp(26px,3vw,34px)!important;height:clamp(26px,3vw,34px)!important}
+.pot-st .ring{position:absolute;top:0;width:28px;height:28px;border-radius:50%;background:conic-gradient(#ffb347 var(--p,0%),#2c3742 0);-webkit-mask:radial-gradient(circle,transparent 8px,#000 9px);mask:radial-gradient(circle,transparent 8px,#000 9px);opacity:0}
+.pot-st.busy .ring{opacity:1}
+.pot-st .pin{position:absolute;top:4px}.pot-st .pin .ong-img{width:18px;height:18px}
+.pot-st .ptxt{font-family:var(--f-num);font-size:15px;color:#ffb347}
+.pot-st.empty .ptxt{font-family:var(--f-ui);font-size:11.5px}
+.pot-st.done{cursor:grab;touch-action:none;animation:bounce .9s steps(2) infinite}
+.pot-st.done .ptxt{color:var(--ok);font-family:var(--f-ui);font-size:12px}
+.pot-st.done.dragging{opacity:.4;animation:none}
+.pdone{position:absolute;top:0;display:flex;gap:1px}.pdone img{width:16px;height:16px;image-rendering:pixelated}
+@keyframes bounce{50%{transform:translateY(-4px)}}
+.kghost{position:fixed;z-index:50;pointer-events:none;width:36px;height:50px;image-rendering:pixelated}
+@media (max-width:560px){.cline{grid-template-columns:62px minmax(0,1fr) 62px;gap:6px;padding:8px 2px 0}.pots{grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}.raw-d{width:24px;height:34px}.fridge,.caps{min-height:200px}}
+.labmap{max-height:none!important;overflow:visible!important;cursor:default!important;background:transparent!important;border:0!important}
+.map-inner{width:auto!important;background:transparent!important}
+.mwall{position:relative!important;height:74px;margin-bottom:10px;border:3px solid #2c4a55}
+.mwall .rd,.mwall .mcab{bottom:22%!important}
+.mwall .wall-sign{right:10px;top:6px}
+.mgrid{--gap:10px;container-type:inline-size;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap);--ch:min(calc((100cqw - 2*var(--gap))/3*1.5),380px)}
+.tank.mapt .ss{display:none}
+.mgrid .mcell{position:relative;left:auto!important;top:auto!important;width:auto!important;height:auto!important}
+.tank.mapt{position:relative;display:flex;flex-direction:column;min-height:0;min-width:0}
+.tank.mapt .water{flex:1;height:auto;margin:6px;min-height:0}
+.tank.mapt .tank-h{padding:4px 6px;font-size:14px;gap:4px}
+.tank.mapt .tank-h .tsz{color:var(--muted);font-size:12px}
+.tank.mapt .tank-meta{padding:0 6px;font-size:11.5px}
+.tank.mapt .tank-ctrl{padding:4px 6px 6px}
+.tank.mapt .feedchip{font-size:12.5px;padding:4px 6px}
+.tank.mapt .feedchip .fct{overflow:hidden;text-overflow:ellipsis}
+.mfloor{position:relative;height:58px;margin-top:10px;border-top:4px solid #3b4a52;display:flex;align-items:center;justify-content:flex-end;padding:0 6px}
+.mfloor .robot{position:absolute;left:6px;top:14px;--w:calc(100% - 260px)}
+.mfloor .drain{position:absolute;left:46%;top:20px}
+.mfloor .hatch{position:relative;left:auto!important;top:auto!important}
+@container (max-width:520px){.mgrid{--ch:calc((100cqw - 2*var(--gap))/3*1.75)}.tank.mapt .sl{display:none}.tank.mapt .ss{display:inline}.tank.mapt .tank-h{white-space:nowrap;padding:3px 4px}.tank.mapt .tank-h .led{display:none}.tank.mapt .tank-h .num{font-size:15px}.tank.mapt .tank-h .tsz,.tank.mapt .tank-meta{display:none}.tank.mapt .tank-h{font-size:12.5px}.tank.mapt .tank-h .btn.xs{padding:1px 4px;font-size:11px;min-width:0}.tank.mapt .feedchip{font-size:11px;padding:3px 4px;gap:3px}.tank.mapt .jelly{width:28px;height:39px}.tank.mapt .weed{height:26px}.tank.mapt .xtal{width:26px;height:21px}}
+@container (max-width:340px){.tank.mapt .tank-h .num{font-size:14px}.mcell small{display:none}}
+.jelly{touch-action:none}
+.tank.mapt.dropok{outline:3px dashed var(--ok);outline-offset:2px}.tank.mapt.dropover{outline:3px solid var(--ok);box-shadow:0 0 0 6px rgba(123,227,129,.25)}
+.tank.mapt.dropno{opacity:.45}
+.kitdrop{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:49;display:flex;flex-direction:column;align-items:center;gap:2px;padding:12px 22px;min-width:min(320px,calc(100vw - 32px));background:#2a1410;border:3px dashed var(--yolk);color:var(--yolk);box-shadow:4px 4px 0 #000;text-align:center;font-size:15px}
+.kitdrop small{color:var(--muted);font-size:12px}.kitdrop.dropover{background:#4a2a12;border-style:solid}
+body.jdragging{user-select:none;-webkit-user-select:none}
 .jelly.sel{outline:2px dashed var(--yolk);outline-offset:2px}
 .jelly.ghosted{opacity:.25}
 .sp-black{filter:drop-shadow(0 0 3px var(--toxic))}
@@ -314,7 +549,7 @@ body.dead .clock-time{color:var(--toxic);animation:glt 2.2s steps(1) infinite}
 /* 태블릿·폴드 펼침(701–1120px): 수조 옆에 가마솥/창고를 붙여 드래그 거리를 줄이고, 밴·트럭은 수조 아래 두 칸 */
 /* 태블릿·폴드 펼침 */
 
-@media (max-width:700px){.chip b.num{font-size:1.05em}.chip span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}#viewTank{grid-template-columns:minmax(0,1fr);grid-template-areas:"center" "side"}#viewKit{grid-template-columns:minmax(0,1fr);grid-template-areas:"kraw" "right"}.clock{max-width:none}.money{width:100%}.chip{flex:1;min-width:0}}
+@media (max-width:700px){.chip b.num{font-size:1.05em}.chip span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}#viewTank{grid-template-columns:minmax(0,1fr);grid-template-areas:"center"}#viewKit{grid-template-columns:minmax(0,1fr);grid-template-areas:"deco" "ktools" "kscene"}.clock{max-width:none}.money{width:100%}.chip{flex:1;min-width:0}}
 /* 폴드 커버·소형 폰 */
 @media (max-width:420px){.top{padding:8px}.clock{min-width:0}.clock-time{font-size:24px}
   .money{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}.chip{padding:3px 6px}.chip span{font-size:10px}.chip b.num{font-size:.95em}
@@ -324,52 +559,43 @@ body.dead .clock-time{color:var(--toxic);animation:glt 2.2s steps(1) infinite}
   .speed .btn.sm{padding:3px 6px;font-size:12px}.water{margin:6px}}
 @media (max-width:360px){.money{grid-template-columns:1fr}.chip{flex-direction:row;justify-content:space-between;align-items:baseline}.chip span{font-size:11px}
   .clock-row{flex-wrap:wrap}.clock-time{font-size:22px}}
+@media (max-width:560px){.speed{display:none}.sp-cyc{display:inline-block}.top{gap:6px}.clk small{display:none}}
+@media (max-width:560px){.mwall .f1,.mwall .f2,.mwall .micro{display:none}.mwall .wall-sign{font-size:10.5px;left:6px;right:auto;top:4px}.mwall .mcab{left:auto!important;right:8px;width:56px;height:46px}#viewTank .floor-h>span:first-child{display:none}.lab-deco .m2,.lab-deco .f3,.kit-deco .l2,.porthole.p2{display:none}.rd-label{font-size:11px}}
+@media (max-width:440px){.clk b{font-size:18px}.clk .sol{display:none}.cash,.darkm{font-size:15px}.cash .u{display:none}.mini-b{padding:2px 3px}.mm{width:20px;height:10px}.top{padding:5px 4px 7px;gap:4px}.top .btn.xs{padding:2px 4px;min-width:22px}.book-b img{width:18px;height:15px}}
+@media (max-width:330px){.top .book-b{display:none}.top .btn.xs{padding:2px 3px;min-width:20px}.clk .sol{display:none}.clk b{font-size:15px}.cash,.darkm{font-size:13px}.cash .u{display:none}.mm{width:18px;height:9px}.top{gap:4px}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important}}
 </style>
-</head>
-<body>
+
 <header class="top" id="top">
-  <div style="display:flex;gap:8px;align-items:center"><span class="tj mini sp-gray"></span><div class="mini-logo"><small>도전! 나도 사장님</small><b>우행옹 타이쿤</b></div></div>
-  <div class="clock">
-    <div class="clock-row"><span class="clock-time" id="clk">Sol 1 · 08:30</span><span class="muted" id="clkNote">월요일</span></div>
-    <div class="timeline" title="24:00–24:40 감시 위성 OFF"><i id="tl"></i><em></em></div>
-  </div>
-  <div class="money">
-    <div class="chip cash neg"><span>잔고</span><b class="num" id="mCash">-5,000 Ⓜ</b></div>
-    <div class="chip dark" id="darkChip" hidden><span>다크 마스</span><b class="num" id="mDark">0 d-Ⓜ</b></div>
-  </div>
-  <div class="speed" id="speed">
-    <button class="btn sm" data-speed="0" id="sp0">정지</button>
-    <button class="btn sm" data-speed="1">1×</button>
-    <button class="btn sm on" data-speed="4">4×</button>
-    <button class="btn sm" data-speed="12">12×</button>
-    <button class="btn sm" data-act="skip" title="다음 날 06:00까지 빨리 감기">다음 아침</button>
-    <button class="btn sm" data-act="codex" id="codexBtn">교배연구도감</button>
-    <button class="btn sm" data-act="help">규칙</button>
-  </div>
+  <span class="clk"><b class="num" id="clk">S1 08:30</b><small id="clkNote">월</small></span>
+  <span class="cash num" id="mCash" title="잔고">-5,000Ⓜ</span>
+  <span class="darkm num" id="darkChip" hidden title="다크 마스"><b id="mDark">0</b>d</span>
+  <span class="minis">
+    <button class="mini-b" data-act="van" title="본사 밴"><img class="sprite mm" id="vanMover" alt="본사 밴"><small id="vanStatus"></small><i class="mbar"><i id="vanBar"></i></i></button>
+    <button class="mini-b" data-act="truck" title="푸드트럭"><img class="sprite mm" id="trkMover" alt="푸드트럭"><small id="trkStatus"></small><i class="mbar"><i id="trkBar"></i></i><i class="coin" id="coin">Ⓜ</i></button>
+  </span>
+  <span class="speed" id="speed"><button class="btn xs" data-speed="0" id="sp0" title="정지" aria-label="정지">‖</button><button class="btn xs" data-speed="1">1×</button><button class="btn xs on" data-speed="4">4×</button><button class="btn xs" data-speed="12">12×</button></span>
+  <button class="btn xs sp-cyc" data-act="spcycle" id="spCyc" title="속도 바꾸기">4×</button>
+  <button class="btn xs" data-act="skip" title="다음 날 06:00까지 건너뛰기" aria-label="다음 아침까지 건너뛰기">»</button>
+  <button class="btn xs menu-b book-b" data-act="codex" id="menuBtn" title="교배연구도감" aria-label="교배연구도감"><img class="sprite" id="bookImg" alt=""></button>
+  <button class="btn xs" data-act="helpTabs" title="도움말" aria-label="도움말">?</button>
+  <i class="tl" title="24:00–24:40 감시 위성 OFF"><i id="tl"></i><em></em></i>
 </header>
 
-<section class="routes" aria-label="운행 상태">
-  <div class="lane" data-act="van"><div class="lane-h"><span id="vanLabel">본사 밴</span><span class="lane-s" id="vanStatus"></span></div>
-    <div class="track"><b class="end l">작업실</b><b class="end r">본사</b><img class="sprite mover" id="vanMover" alt=""></div></div>
-  <div class="lane" data-act="truck"><div class="lane-h"><span>플라잉 푸드트럭</span><span class="lane-s" id="trkStatus"></span></div>
-    <div class="track" id="trkTrack"><b class="end l">도킹 베이</b><b class="end r">돔 상권</b><i class="coin" id="coin">Ⓜ</i><img class="sprite mover" id="trkMover" alt=""></div></div>
-</section>
 <nav class="tabs" aria-label="화면 전환">
   <button class="tab on" data-tab="tank" id="tabTank">지하 수조실 <span class="badge" id="tankBadge"></span></button>
   <button class="tab" data-tab="kit" id="tabKit">작업장 <span class="badge" id="kitBadge"></span></button>
 </nav>
-<div class="coach" id="coach" hidden style="margin-top:14px"><b>튜토리얼</b><p id="coachText"></p><button class="btn sm" data-act="coachOff">닫기</button></div>
-<main class="floor" id="viewTank">
+<main class="floor room lab" id="viewTank">
   <div class="col" id="center">
-    <div class="floor-h"><span>지하 수조실</span><span class="pill" id="slotInfo">작업실 2/3칸</span></div>
-    <div class="tanks" id="tanks"></div>
+    <div class="floor-h"><span>수조실</span><span class="map-tools"><span class="pill" id="slotInfo">작업실 2/3칸</span><button class="btn xs hot" data-act="feed">먹이 공급</button><button class="btn xs" data-act="huntGo" id="huntBtn">동굴 사냥</button><button class="btn xs" data-act="layout">배치 변경</button><button class="btn xs" data-act="frozen" id="frzBtn" hidden>동결 0</button></span></div>
+    <div class="labmap" id="labmap"><div class="map-inner" id="tanks"></div></div>
   </div>
-  <div class="col" id="side"></div>
 </main>
-<main class="floor" id="viewKit" hidden>
-  <div class="col" id="kraw"></div>
-  <div class="col" id="right"></div>
+<main class="floor room kitchen" id="viewKit" hidden>
+  <div class="room-deco kit-deco" aria-hidden="true"><span class="rd-label">우해옹 갤리 · 화성 궤도 B3 · 가맹 0419호</span><i class="porthole"><i class="mars"></i></i><i class="porthole p2"><i class="sat"></i></i><i class="lightbar"></i><i class="magstrip"></i><i class="rd ladle"></i><i class="rd whisk"></i><i class="rd ladle l2"></i><i class="airlock"></i></div>
+  <div class="ktools" id="ktools"></div>
+  <div class="kscene"><div class="cline"><div class="fridge" id="kraw"></div><div class="pots" id="kpot"></div><div class="caps" id="kshelf"></div></div><div class="cbar"></div><p class="muted khint" id="khint"></p></div>
 </main>
 
 <div class="overlay" id="overlay">
@@ -378,7 +604,7 @@ body.dead .clock-time{color:var(--toxic);animation:glt 2.2s steps(1) infinite}
     <div class="tj sp-gray" style="left:2%;top:8%"></div><div class="tj sp-neon" style="right:4%;top:2%;animation-delay:.8s"></div><div class="tj tj-lo sp-coral" style="right:14%;bottom:-6%;animation-delay:1.6s;width:36px;height:50px"></div><div class="tj tj-lo sp-green" style="left:10%;bottom:-2%;animation-delay:2.2s;width:36px;height:50px"></div>
     <div class="logo">
       <div class="logo-top">[도전! 나도 사장님]</div>
-      <div class="logo-main" data-text="우행옹 타이쿤">우행옹 타이쿤</div>
+      <div class="logo-main" data-text="우해옹 타이쿤">우해옹 타이쿤</div>
     </div>
     <p class="tagline">화성 지하 작업실에서 우주해파리를 키워<br>쫀득한 우해옹으로 졸여 파는 소자본 창업 시뮬레이션</p>
     <div class="btn-row" style="justify-content:center">
@@ -426,12 +652,13 @@ body.dead .clock-time{color:var(--toxic);animation:glt 2.2s steps(1) infinite}
 
 <div class="hunt" id="hunt" hidden>
   <div class="hunt-box">
-    <div class="hunt-h"><b>해파리 동굴</b><span class="num" id="huntTime">60</span><span id="huntCount" class="hunt-count"></span><button class="btn sm" data-act="huntQuit">포기하고 돌아가기</button></div>
+    <div class="hunt-h"><b>해파리 동굴</b><span class="num" id="huntTime">45</span><span id="huntCount" class="hunt-count"></span><button class="btn sm" data-act="huntQuit">포기하고 돌아가기</button></div>
     <canvas id="huntCv" width="640" height="400" aria-label="해파리 사냥 동굴"></canvas>
-    <p class="muted" id="huntHelp">방향키/WASD 또는 화면을 누른 채 끌어 이동 · 전기파리채에 닿으면 지지직! 해파리가 더 빠르니 바위 틈과 구석으로 몰아세우세요.</p>
+    <p class="muted" id="huntHelp">방향키/WASD 또는 화면을 누른 채 끌어 이동 · 전기파리채 끝에 닿아야 잡혀요. 가까이 가면 옆으로 몸을 틀어 피하니 바위 틈으로 몰아세우세요.</p>
     <div id="huntEnd" hidden></div>
   </div>
 </div>
+<div class="coachpop" id="coach" hidden><b>지금 할 일</b><p id="coachText"></p><div class="btn-row"><button class="btn xs" data-act="coachHide">알겠어요</button><button class="btn xs" data-act="coachOff">튜토리얼 끄기</button></div></div>
 <div class="jpop" id="jpop" hidden></div>
 <div class="modal" id="modal" hidden></div>
 <div id="toast" hidden></div>
@@ -442,7 +669,7 @@ const DAY=1480, DEAD=1440, LIMIT=6000, CAPS=[30,50,80], UPCOST=[250,600];
 const capT=()=>CAPS[G.truckLv||0];
 const DOW=['월','화','수','목','금','토','일'];
 const SIZES={s:{n:'소형',cap:6,rent:25,h:150,slot:1},m:{n:'중형',cap:12,rent:50,h:200,slot:2},l:{n:'대형',cap:24,rent:100,h:250,slot:3}};
-const MAXSLOT=12, EXPCOST=[300,500,800];
+const MAXSLOT=12, EXPCOST=[300,500,800], RMCOST={s:20,m:40,l:80};
 const usedSlots=()=>G.tanks.reduce((a,t)=>a+SIZES[t.size].slot,0);
 const SP={
   gray:{n:'회색',d:'화성종유석',c:'#9aa3ad',base:1,price:10},
@@ -519,6 +746,19 @@ const WEEDA=pix(WEED0,{G:'#4cbf5a',D:'#2d7a3a'}),WEEDB=pix(WEED1,{G:'#4cbf5a',D:
 const XTALI=pix(XTAL,{L:'#efe6ff',C:'#c9b8e8',S:'#8a76b8'});
 const SAND=(()=>{const c=document.createElement('canvas');c.width=32;c.height=6;const x=c.getContext('2d');x.fillStyle='#5e2f22';x.fillRect(0,0,32,6);x.fillStyle='#7a3e2a';x.fillRect(0,0,32,2);
   [[3,1,'#a35a3a'],[9,3,'#2c1a1a'],[14,1,'#a35a3a'],[20,4,'#2c1a1a'],[26,2,'#c27a4a'],[30,1,'#a35a3a'],[6,4,'#7a3e2a'],[17,3,'#c27a4a']].forEach(([a,b,col])=>{x.fillStyle=col;x.fillRect(a,b,2,1)});return c.toDataURL()})();
+const FLASKP=["...GG...","...GG...","...GG...","..GLLG..",".GLLLLG.","GLLBBLLG","GLBBBBLG","GBBBBBBG",".GBBBBG.","..GGGG.."];
+const MICROP=["...KK.....","...KK.....","....KK....","....KKK...",".....KK...","..KKKKKK..","..K.KK....","....KK....","...KKKK...","..KKKKKK..",".KKKKKKKK.",".KKKKKKKK."];
+const MONP=["KKKKKKKKKKKKKK","KSSSSSSSSSSSSK","KSSSSSSSSSSSSK","KSWSSSWSSSSSSK","KSSWSWSWSSWSSK","KSSSWSSSWWSWSK","KSSSSSSSSSSSSK","KKKKKKKKKKKKKK","......KK......","....KKKKKK...."];
+const LADLEP=["..KK..","..K...","..SS..","..SS..","..SS..","..SS..","..SS..","..SS..","..SS..","..SS..","..SS..",".SSSS.","SSSSSS","SSSSSS",".SSSS.","......"];
+const WHISKP=["..KK..","..K...","..WW..","..WW..","..WW..","..WW..","..WW..",".S..S.","S.SS.S","S.SS.S","S.SS.S","S.SS.S",".S..S.","..SS..","......","......"];
+const JARP=["..LLLLLL..","..LLLLLL..",".GGGGGGGG.","G........G","G.OO..OO.G","G.OOOOOO.G","G.OOOOOO.G","G.OO.OOO.G","G.OOOOOO.G","G........G",".GGGGGGGG.",".........."];
+const TILE=(a,b,c)=>{const cv=document.createElement('canvas');cv.width=16;cv.height=16;const x=cv.getContext('2d');x.fillStyle=a;x.fillRect(0,0,16,16);x.fillStyle=b;x.fillRect(0,15,16,1);x.fillRect(15,0,1,16);x.fillStyle=c;x.fillRect(1,1,3,1);x.fillRect(1,1,1,3);return cv.toDataURL()};
+const DECO={flask1:pix(FLASKP,{G:'#b8d8d4',L:'#1e2c30',B:'#3dffd2'}),flask2:pix(FLASKP,{G:'#b8d8d4',L:'#1e2c30',B:'#ff7ab0'}),flask3:pix(FLASKP,{G:'#b8d8d4',L:'#1e2c30',B:'#b45cff'}),
+  micro:pix(MICROP,{K:'#9aa3ad'}),mon:pix(MONP,{K:'#3b3f47',S:'#0e2a33',W:'#7be381'}),ladle:pix(LADLEP,{K:'#2b1a0e',S:'#c9cfd6'}),whisk:pix(WHISKP,{K:'#2b1a0e',W:'#8a5a33',S:'#c9cfd6'}),
+  jar:pix(JARP,{L:'#a0522d',G:'#e9dcc4',O:'#f6e2c0'}),labTile:TILE('#12202a','#0b151c','#1d3340'),kitTile:(()=>{const cv=document.createElement('canvas');cv.width=16;cv.height=16;const x=cv.getContext('2d');x.fillStyle='#1b232b';x.fillRect(0,0,16,16);x.fillStyle='#121820';x.fillRect(0,15,16,1);x.fillRect(15,0,1,16);x.fillStyle='#2a3540';x.fillRect(0,0,15,1);x.fillStyle='#4b5966';[[2,2],[12,2],[2,12],[12,12]].forEach(([a,b])=>x.fillRect(a,b,1,1));return cv.toDataURL()})()};
+const BOOK=pix(["..KKKKKKKKK.",".KRRRRRRRRK.",".KRYYYYYRRK.",".KRRRRRRRRK.",".KRRYYRRRRK.",".KRRRRRRRRK.",".KRRRRRRRRK.",".KWWWWWWWWK.","..KKKKKKKKK.","............"],{K:'#1a0f1e',R:'#a0522d',Y:'#ffcf3f',W:'#f6e2c0'});
+const ROBOT=pix(["...KK.....","..KCCK....",".KCCCCK...",".KCECEK...",".KCCCCK...","..KKKK....",".KSSSSK...","KSSSSSSK..",".K....K...",".KK..KK..."],{K:'#1a0f1e',C:'#c9cfd6',E:'#7ee3d9',S:'#8a93a0'});
+const CAB=pix(["KKKKKKKKKKKK","KGGGGKKGGGGK","KGLLGKKGLLGK","KGLLGKKGLLGK","KGGGGKKGGGGK","KKKKKKKKKKKK","KMMMMMMMMMMK","KMWMMMMMMWMK","KMMMMMMMMMMK","KKKKKKKKKKKK"],{K:'#2c3a42',G:'#7ee3d9',L:'#3dffd2',M:'#5f7480',W:'#c9cfd6'});
 const DLVP=["...PPPPPPPP...","..PGGPPPPPPPP.",".PPPPPPPPPPPPP","PPYYPPPPPPPPPP","PPYYPPPPPPPPPP",".PPPPPPPPPPPP.","..FF......FF..",".............."];
 const DLV=pix(DLVP,{P:'#8f5bd6',G:'#7ee3d9',Y:'#ffcf3f',F:'#ec6a3c'});
 const DLVPRICE={gray:10}, DLVPACK=5;
@@ -526,6 +766,8 @@ const TRK=pix(TRKP,{S:'#c9cfd6',G:'#7ee3d9',L:'#ffcf3f',D:'#3b3f47',F:'#ec6a3c'}
 (function(){let css='';for(const k in SP){const c=SP[k].c;const pal={X:c,H:shade(c,.45),E:k==='black'?'#d6a2ff':'#1a0f1e',S:shade(c,-.3),T:shade(c,-.12),P:'#ff9bb4',W:'#ffffff',M:k==='black'?'#d6a2ff':'#1a0f1e',A:k==='black'?'#6a5a80':shade(c,-.2),B:k==='black'?'#d6a2ff':shade(c,.62)};
   const an=ANT[ANTOF[k]];SP[k].f0=pix(an[0].concat(JB,T0),pal);SP[k].f1=pix(an[1].concat(JB,T1),pal);SP[k].fb=pix(an[0].concat(JBK,T0),pal);SP[k].o=pix(ONG,{X:c,H:shade(c,.55),S:shade(c,-.35),E:k==='black'?'#d6a2ff':'#1a0f1e',M:k==='black'?'#d6a2ff':'#1a0f1e',P:'#ff9bb4'});
   css+=`.sp-${k}{--f0:url(${SP[k].f0});--f1:url(${SP[k].f1});--fb:url(${SP[k].fb})}`}
+  css+=`.lab{--tile:url(${DECO.labTile})}.kitchen{--tile:url(${DECO.kitTile})}.rd.flask.f1{background-image:url(${DECO.flask1})}.rd.flask.f2{background-image:url(${DECO.flask2})}.rd.flask.f3{background-image:url(${DECO.flask3})}.rd.micro{background-image:url(${DECO.micro})}.rd.monitor{background-image:url(${DECO.mon})}.rd.ladle{background-image:url(${DECO.ladle})}.rd.whisk{background-image:url(${DECO.whisk})}.rd.jar{background-image:url(${DECO.jar})}`;
+  css+=`.robot{background-image:url(${ROBOT})}.mcab{background-image:url(${CAB})}`;
   css+=`.sand{background-image:url(${SAND})}.weed{--w0:url(${WEEDA});--w1:url(${WEEDB})}.xtal{background-image:url(${XTALI})}`;
   const st=document.createElement('style');st.textContent=css;document.head.appendChild(st)})();
 
@@ -541,9 +783,13 @@ const BM_WANT=['neon','noise'];
 const fmt=m=>String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0');
 const won=n=>n.toLocaleString('ko-KR');
 function mkJ(sp){return{id:G.nid++,sp,fed:0,fast:0,x:Math.random(),y:.25+Math.random()*.5,vx:(Math.random()-.5)*.0014,vy:0}}
-function addTank(size){const t={id:G.tid++,size,food:null,on:false,fed:0,fast:0,j:[]};G.tanks.push(t);return t}
+const MCOLS=3,MROWS=4,CW=240,CH=318,MPX=40,MTOP=110,MBOT=84;
+function occMap(ignore){const o={};G.tanks.forEach(t=>{if(t.id===ignore||!t.pos)return;for(let i=0;i<SIZES[t.size].slot;i++)o[t.pos.r+','+(t.pos.c+i)]=t.id});return o}
+function canPlace(size,r,c,ignore,occ){const sp=SIZES[size].slot,rows=(G.slots||3)/3;if(r<0||r>=rows||c<0||c+sp>MCOLS)return false;occ=occ||occMap(ignore);for(let i=0;i<sp;i++){const v=occ[r+','+(c+i)];if(v!==undefined&&v!==ignore)return false}return true}
+function findSpot(size){const rows=(G.slots||3)/3,occ=occMap();for(let r=0;r<rows;r++)for(let c=0;c+SIZES[size].slot<=MCOLS;c++)if(canPlace(size,r,c,null,occ))return{r,c};return null}
+function addTank(size){const t={id:G.tid++,size,food:null,on:false,fed:0,fast:0,j:[]};t.pos=findSpot(size)||{r:0,c:0};G.tanks.push(t);return t}
 function newGame(){
-  G={sol:1,m:510,cash:-5000,dark:0,truckLv:0,strikes:0,nid:1,tid:1,tanks:[],cubes:{gray:6,brown:0,green:0,black:0},delivery:null,slots:3,raw:[],ong:{},pot:[],truck:{cargo:{},out:false},receipt:null,vanHere:false,flags:{},log:[],over:false,market:{},codex:{sp:{gray:1},log:[]},codexNew:0};
+  G={sol:1,m:510,cash:-5000,dark:0,truckLv:0,strikes:0,nid:1,tid:1,tanks:[],cubes:{gray:6,brown:0,green:0,black:0},delivery:null,slots:3,raw:[],ong:{},pot:[null,null,null,null],truck:{cargo:{},out:false},receipt:null,vanHere:false,flags:{},log:[],over:false,market:{},codex:{sp:{gray:1},log:[]},codexNew:0};
   const t=addTank('m');t.j.push(mkJ('gray'),mkJ('gray'),mkJ('gray'));t.j.forEach(j=>{j.fed=2;j.hist=['gray','gray']});G.ong={gray:6};
   log('창업 패키지 수령 — 중형 수조, 회색 해파리 3(본사에서 2일 배양 완료), 그레이 큐브 6, 흑임자옹심 샘플 6알 (잔고 -5,000Ⓜ)','mars');
 }
@@ -576,33 +822,34 @@ function stepMinute(){
       else{log('감시 위성 OFF — 안드로이드 브로커 BRK-7: "원하는 옹심이가 없습니다." 연결 종료','toxic');toast('BRK-7 ▸ 창고 스캔 완료. 원하는 옹심이가 없습니다. 연결을 종료합니다.',4200)}}
     else log('감시 위성 OFF — 마의 40분. 조용한 밤이다','')}
   const now=T();
-  for(const p of G.pot){if(now>=p.end){p.done=1;G.ong[p.sp]=(G.ong[p.sp]||0)+3;G.flags.cooked=1;log(`우해옹 완성 — ${SP[p.sp].n} ×3`,'ok');dirty=true}}
-  G.pot=G.pot.filter(p=>!p.done);
-  if(G.m>=DAY){G.m=0;G.sol++;G.bmActive=false;document.body.classList.remove('dead');processDay();checkRescue();dirty=true;save()}
+  G.pot.forEach((p,i)=>{if(p&&!p.done&&now>=p.end){p.done=1;log(`가마솥 ${i+1} 완성 — ${SP[p.sp].n} 우해옹 3알. 꺼내서 캡슐에 넣어 주세요`,'ok');dirty=true}});
+  if(G.m>=DAY){G.m=0;G.sol++;G.bmActive=false;document.body.classList.remove('dead');processDay();checkRescue();showNightReport();{const w=(G.rep||[]).filter(x=>x.warn).map(x=>x.txt);if(w.length)showStarve(w)}dirty=true;save()}
 }
 /* 급여·단식 일수는 개체마다 따로 센다 (수조를 옮겨도 유지).
    연속 3일째 먹은 개체(2일 먹고 오늘도 먹음)끼리 짝 → 짝마다 1마리.
    4일 굶은 개체는 5일째 밤에 같은 수조의 아무 개체나 포식. */
 function processDay(){
-  marketDay();
+  marketDay();G.rep=[];
   for(const t of G.tanks){
     const n=t.j.length;if(!n)continue;
     const snap=new Map(t.j.map(j=>[j.id,j.sp]));
     const turned={};t.j.forEach(j=>{if(j.dye){turned[j.dye]=(turned[j.dye]||0)+1;j.sp=j.dye;delete j.dye}});
+    Object.entries(turned).forEach(([k,c])=>G.rep.push({chg:1,sp:k,txt:`TANK-${String(t.id).padStart(2,'0')} · 회색 해파리 ${c}마리가 ${SP[k].n} 해파리로 변했어요`}));
     if(Object.keys(turned).length)log(`수조 #${t.id}: 회색 해파리 변색 — ${Object.entries(turned).map(([k,c])=>SP[k].n+' '+c+'마리').join(', ')}`,'ok');
     Object.keys(turned).forEach(k=>{codexSp(k);codexAdd('dye:'+k,`회색 + ${CUBE[k].n} → 하루 뒤 ${SP[k].n}`)});
     if(t.on&&t.food&&G.cubes[t.food]>=n){
       G.cubes[t.food]-=n;
       t.j.forEach(j=>{j.fed=(j.fed||0)+1;j.fast=0;j.hist=(j.hist||[]).concat(t.food).slice(-6);if(t.food!=='gray'&&j.sp==='gray')j.dye=t.food});
       const ready=t.j.filter(j=>j.fed>=3);if(ready.length>=2)breed(t,snap,ready);
-      if(G.cubes[t.food]<t.j.length){t.on=false;log(`수조 #${t.id}: ${CUBE[t.food].n} 재고 부족 → 배식 자동 OFF`,'danger')}
+      if(G.cubes[t.food]<t.j.length){t.on=false;G.rep.push({warn:1,txt:`TANK-${String(t.id).padStart(2,'0')} · ${CUBE[t.food].n}가 모자라 배식이 꺼졌어요`});log(`수조 #${t.id}: ${CUBE[t.food].n} 재고 부족 → 배식 자동 OFF`,'danger')}
     }else{
-      if(t.on){t.on=false;log(`수조 #${t.id}: 재고 소진 → 배식 자동 OFF`,'danger')}
+      if(t.on){t.on=false;G.rep.push({warn:1,txt:`TANK-${String(t.id).padStart(2,'0')} · 먹이가 떨어져 배식이 꺼졌어요`});log(`수조 #${t.id}: 재고 소진 → 배식 자동 OFF`,'danger')}
       t.j.forEach(j=>{delete j.dye;j.fed=0;j.hist=(j.hist||[]).concat('x').slice(-6);j.fast=(j.fast||0)+1});
       const starving=t.j.filter(j=>j.fast>=5).sort(()=>Math.random()-.5);
       for(const a of starving){if(!t.j.includes(a)||t.j.length<2)continue;const others=t.j.filter(x=>x!==a),b=others[Math.floor(Math.random()*others.length)];
         const pa=snap.get(a.id)||a.sp,pb=snap.get(b.id)||b.sp,res=babyOf(pa,pb);
         t.j.splice(t.j.indexOf(b),1);a.sp=res;a.fast=0;delete a.dye;codexAdd('prey','오래 굶은 개체가 같은 수조의 개체를 잡아먹었다');
+        G.rep.push({chg:1,sp:res,bad:1,txt:`TANK-${String(t.id).padStart(2,'0')} · 굶주린 ${SP[pa].n} 해파리가 ${SP[pb].n} 해파리를 잡아먹고 ${SP[res].n} 해파리가 됐어요 (−1)`});
         log(`수조 #${t.id}: 굶주린 ${SP[pa].n} 해파리가 ${SP[pb].n} 해파리를 촉수로 감싸 포식 → ${SP[res].n} 해파리 (−1)`,SP[res].base?'danger':'toxic');
         codexSp(res);if(!SP[res].base){const[x,y]=[pa,pb].sort();codexAdd('eat:'+x+'+'+y,`${SP[x].n} × ${SP[y].n} 상호포식 → ${SP[res].n}`)}}
     }
@@ -623,6 +870,7 @@ function breed(t,snap,ready){
     a.fed=0;b.fed=0;pairs++;
     const nj=mkJ(sp);nj.x=(a.x+b.x)/2;nj.y=(a.y+b.y)/2;t.j.push(nj);born[sp]=(born[sp]||0)+1;codexSp(sp);if(!SP[sp].base){const[x,y]=[pa,pb].sort();codexAdd('mix:'+x+'+'+y,`${SP[x].n} × ${SP[y].n} → ${SP[sp].n}`)}}
   if(!pairs)return;G.flags.bred=1;codexAdd('breed','사흘 내리 먹은 개체 둘이 공명 → 새끼 1마리');const hyb=Object.keys(born).some(k=>!SP[k].base);
+  Object.entries(born).forEach(([k,n])=>G.rep.push({chg:1,sp:k,hyb:!SP[k].base,txt:`TANK-${String(t.id).padStart(2,'0')} · ${SP[k].n} 해파리 +${n}${SP[k].base?'':' (교배종!)'}`}));
   log(`수조 #${t.id}: ${pairs}쌍이 공명 — ${Object.entries(born).map(([k,n])=>SP[k].n+' +'+n).join(', ')}`,hyb?'toxic':'ok');
 }
 function deliveryArrive(){const it=G.delivery.items;for(const k in it)G.cubes[k]+=it[k];const txt=Object.entries(it).map(([k,n])=>CUBE[k].n+' ×'+n).join(', ');G.delivery=null;
@@ -652,22 +900,32 @@ function checkRescue(){if(!G||G.over||(G.flags&&G.flags.rescued)||!G.tanks.lengt
 const HSPD={gray:1.2,brown:1.5,green:1.75,black:2};
 const HUNTER=pix(["...HHHH...","..HHHHHH..","..SSSSSS..","..SESSES..","..SSSSSS..","...SSSS...",".OOOOOOOO.","OOOOOOOOOO","S.OOOOOO.S","..OOOOOO..","..BB..BB..","..KK..KK.."],{H:'#ffcf3f',S:'#f1c7a0',E:'#1a0f1e',O:'#ec6a3c',B:'#3b3f47',K:'#1a0f1e'});
 let HN=null;
+const HUNTFEE=40;
+const weekNo=()=>Math.floor((G.sol-1)/7);
+const huntDone=()=>G.huntWeek===weekNo();
 function jellyTotal(){return G.tanks.reduce((a,t)=>a+t.j.length,0)+(G.frozen||[]).length+(G.raw||[]).length}
 function stuck(){return G&&!G.over&&G.tanks.length>0&&jellyTotal()<=1&&G.cash-12<-LIMIT}
-function maybeAskHunt(){if(!stuck()||HN||G.huntAsk===G.sol||G.huntSol===G.sol||!$('#modal').hidden)return;G.huntAsk=G.sol;
+function maybeAskHunt(){if(!stuck()||HN||G.huntAsk===G.sol||huntDone()||!$('#modal').hidden)return;G.huntAsk=G.sol;
   modal(`<section class="card"><header class="card-h"><span>빈 수조, 막힌 대출</span><span class="pill warn">시간 정지</span></header>
   <img class="sprite" src="${HUNTER}" alt="" style="width:40px;height:48px">
   <p style="margin:0">잔고가 한도에 걸려 더는 해파리를 살 수 없고, 수조도 비었습니다. 작업실 아래 해파리 동굴로 사냥을 떠날까요?</p>
-  <p class="muted" style="margin:0">전기파리채에 닿으면 잡혀요. 하루 한 번만 갈 수 있습니다.</p>
+  <p class="muted" style="margin:0">평소엔 일주일에 한 번, 입장비 40Ⓜ를 내고 들어갑니다. 지금은 비상이라 입장비가 면제돼요.</p>
   <button class="btn hot" data-act="huntGo">해파리 동굴로</button><button class="btn" data-act="closeModal">나중에</button></section>`)}
-function startHunt(){if(G.huntSol===G.sol){toast('오늘은 이미 사냥을 다녀왔어요');return}G.huntSol=G.sol;$('#modal').hidden=true;sel=null;hideJPop();
+function askHunt(){if(huntDone()){toast('이번 주 토벌은 끝났어요. 다음 월요일에 다시 열려요');return}const free=stuck(),after=G.cash-HUNTFEE;
+  modal(`<section class="card"><header class="card-h"><span>해파리 동굴 토벌</span><span class="pill ${free?'warn':''}">${free?'비상 출입':'주 1회'}</span></header>
+  <img class="sprite" src="${HUNTER}" alt="" style="width:40px;height:48px">
+  <p style="margin:0">45초 동안 전기파리채로 야생 해파리를 잡습니다. 해파리는 사장님보다 빠르니 바위 틈으로 몰아세우세요.</p>
+  ${free?'<p style="margin:0;color:var(--yolk)">대출도 막히고 해파리도 없어 이번엔 입장비를 받지 않습니다.</p>':`<div class="cart-sum"><span>토벌 입장비 <b class="num">${HUNTFEE}Ⓜ</b></span><span>입장 후 잔고 <b class="num" style="color:${after<0?'var(--danger)':'var(--yolk)'}">${won(after)}Ⓜ</b></span></div>`}
+  <div class="btn-row"><button class="btn hot" data-act="huntStart" ${!free&&after<-LIMIT?'disabled':''}>${free?'입장':'입장비 내고 입장'}</button><button class="btn" data-act="closeModal">취소</button></div>
+  ${!free&&after<-LIMIT?`<p class="muted" style="margin:0;color:var(--danger)">잔고가 -${won(LIMIT)}Ⓜ 아래로 내려가 입장할 수 없어요.</p>`:''}</section>`)}
+function startHunt(){if(huntDone()){toast('이번 주 토벌은 끝났어요');return}if(!stuck()){if(G.cash-HUNTFEE<-LIMIT)return;G.cash-=HUNTFEE;log(`해파리 동굴 토벌 입장 (−${HUNTFEE}Ⓜ)`)}G.huntWeek=weekNo();$('#modal').hidden=true;sel=null;hideJPop();
   const W=640,Hh=400,rocks=[[150,110,70,56],[420,90,56,70],[300,230,80,48],[90,290,56,50],[500,270,70,60]];
-  const mix=['gray','gray','gray','gray','gray','gray','brown','brown','brown','green','green','black'];
+  const mix=['gray','gray','gray','gray','gray','brown','brown','green'].concat(Math.random()<.5?['black']:[]);
   const imgs={};for(const k in HSPD){const a=new Image();a.src=SP[k].f0;const b=new Image();b.src=SP[k].f1;imgs[k]=[a,b]}
   const hunter=new Image();hunter.src=HUNTER;
   const js=mix.map(sp=>{let x,y;do{x=40+Math.random()*(W-80);y=40+Math.random()*(Hh-80)}while(Math.hypot(x-W/2,y-Hh-0+60)<160||rocks.some(r=>x>r[0]-20&&x<r[0]+r[2]+20&&y>r[1]-20&&y<r[1]+r[3]+20));return{sp,x,y,ph:Math.random()*6,wx:Math.random()-.5,wy:Math.random()-.5}});
   const specks=Array.from({length:90},()=>[Math.random()*W|0,Math.random()*Hh|0,Math.random()<.5?'#2a1a24':'#24161e']);
-  HN={W,H:Hh,rocks,js,imgs,hunter,specks,p:{x:W/2,y:Hh-60,fx:1},t:60,caught:{},keys:{},ptr:null,zaps:[],last:performance.now(),done:false};
+  HN={W,H:Hh,rocks,js,imgs,hunter,specks,p:{x:W/2,y:Hh-60,fx:1},t:45,caught:{},keys:{},ptr:null,zaps:[],last:performance.now(),done:false};
   $('#hunt').hidden=false;$('#huntEnd').hidden=true;$('#huntCv').hidden=false;$('#huntHelp').hidden=false;huntHud();requestAnimationFrame(huntLoop)}
 function huntHud(){$('#huntTime').textContent=Math.ceil(Math.max(0,HN.t));$('#huntCount').innerHTML=Object.keys(HSPD).map(k=>`<span><i class="sp-${k}" style="background-image:var(--f0)"></i>${HN.caught[k]||0}</span>`).join('')}
 function huntPush(o,r){const{W,H}=HN;o.x=Math.max(20+r,Math.min(W-20-r,o.x));o.y=Math.max(20+r,Math.min(H-20-r,o.y));
@@ -679,11 +937,16 @@ function huntLoop(now){if(!HN||HN.done)return;const dt=Math.min(.05,(now-HN.last
   const ml=Math.hypot(mx,my);if(ml){P.x+=mx/ml*VP*dt;P.y+=my/ml*VP*dt;if(mx)P.fx=Math.sign(mx)}huntPush(P,13);
   const sx=P.x+P.fx*20,sy=P.y-4;
   for(const j of HN.js){if(j.caught)continue;j.ph+=dt*4;const dx=j.x-P.x,dy=j.y-P.y,d=Math.hypot(dx,dy)||1;
-    let vx,vy;if(d<150){const pulse=.3+.7*Math.max(0,Math.sin(j.ph));const sp=HSPD[j.sp]*VP*pulse;vx=dx/d*sp;vy=dy/d*sp;
-      const m=40;if(j.x<m)vx+=sp*.6;if(j.x>HN.W-m)vx-=sp*.6;if(j.y<m)vy+=sp*.6;if(j.y>HN.H-m)vy-=sp*.6}
-    else{if(Math.random()<dt)j.wx=Math.random()-.5,j.wy=Math.random()-.5;vx=j.wx*VP*.5;vy=j.wy*VP*.5}
+    let vx,vy;if(d<230){const pulse=.75+.25*Math.max(0,Math.sin(j.ph));const sp=HSPD[j.sp]*VP*pulse*1.5;
+      j.think=(j.think||0)-dt;if(j.think<=0||!j.dir){j.think=.12+Math.random()*.08;let best=-1e9,bd=null;
+        for(let a=0;a<16;a++){const ang=a/16*Math.PI*2,ux=Math.cos(ang),uy=Math.sin(ang);let sc=0,ok=true;
+          for(const L of [30,60,90]){const qx=j.x+ux*L,qy=j.y+uy*L;if(qx<34||qy<34||qx>HN.W-34||qy>HN.H-34){ok=false;break}if(HN.rocks.some(r=>qx>r[0]-18&&qx<r[0]+r[2]+18&&qy>r[1]-18&&qy<r[1]+r[3]+18)){ok=false;break}}
+          if(!ok)sc-=400;const qx=j.x+ux*70,qy=j.y+uy*70;sc+=Math.hypot(qx-P.x,qy-P.y)+Math.min(qx,qy,HN.W-qx,HN.H-qy)*.35+(j.dir?(ux*j.dir[0]+uy*j.dir[1])*15:0);
+          if(sc>best){best=sc;bd=[ux,uy]}}j.dir=bd}
+      vx=j.dir[0]*sp;vy=j.dir[1]*sp}
+    else{if(Math.random()<dt)j.wx=Math.random()-.5,j.wy=Math.random()-.5;vx=j.wx*VP*.7;vy=j.wy*VP*.7}
     j.x+=vx*dt;j.y+=vy*dt;huntPush(j,14);
-    if(Math.hypot(j.x-sx,j.y-sy)<24||Math.hypot(j.x-P.x,j.y-P.y)<24){j.caught=true;HN.caught[j.sp]=(HN.caught[j.sp]||0)+1;HN.zaps.push({x:j.x,y:j.y,t:.35});huntHud()}}
+    if(Math.hypot(j.x-sx,j.y-sy)<18||Math.hypot(j.x-P.x,j.y-P.y)<16){j.caught=true;HN.caught[j.sp]=(HN.caught[j.sp]||0)+1;HN.zaps.push({x:j.x,y:j.y,t:.35});huntHud()}}
   HN.t-=dt;HN.zaps.forEach(z=>z.t-=dt);HN.zaps=HN.zaps.filter(z=>z.t>0);
   huntDraw(sx,sy);if(Math.floor(HN.t+dt)!==Math.floor(HN.t))huntHud();
   if(HN.t<=0||HN.js.every(j=>j.caught))return huntEnd();requestAnimationFrame(huntLoop)}
@@ -704,7 +967,7 @@ function huntEnd(quit){if(!HN||HN.done)return;HN.done=true;const got=HN.caught,l
   const total=list.reduce((a,[,n])=>a+n,0);log(`해파리 동굴 사냥 — ${total?list.map(([k,n])=>SP[k].n+' '+n).join(', '):'빈손'}${toRaw?` (수조가 꽉 차 ${toRaw}마리는 원재료로)`:''}`,total?'ok':'danger');
   $('#huntCv').hidden=true;$('#huntHelp').hidden=true;const e=$('#huntEnd');e.hidden=false;
   e.innerHTML=`<b style="font-weight:400;font-size:18px">${quit?'사냥을 포기했습니다':HN.js.every(j=>j.caught)?'싹쓸이!':'시간 종료'}</b>
-  <p style="margin:0">${total?`잡은 해파리 ${total}마리: ${list.map(([k,n])=>SP[k].n+' '+n).join(', ')}. 수조로 옮겨 두었어요.`:'한 마리도 못 잡았습니다. 내일 다시 도전할 수 있어요.'}</p>
+  <p style="margin:0">${total?`잡은 해파리 ${total}마리: ${list.map(([k,n])=>SP[k].n+' '+n).join(', ')}. 수조로 옮겨 두었어요.`:'한 마리도 못 잡았습니다. 다음 주에 다시 도전할 수 있어요.'}</p>
   <button class="btn hot" data-act="huntClose">작업실로 돌아가기</button>`;renderAll()}
 document.addEventListener('keydown',e=>{if(!HN||HN.done)return;const k=e.key.length===1?e.key.toLowerCase():e.key;HN.keys[k]=true;if(k.startsWith('Arrow'))e.preventDefault()});
 document.addEventListener('keyup',e=>{if(!HN)return;const k=e.key.length===1?e.key.toLowerCase():e.key;HN.keys[k]=false});
@@ -736,15 +999,15 @@ function checkWin(){if(G.cleared||G.cash<0||G.over)return;G.cleared=true;paused=
 function putJelly(sp){const t=G.tanks.find(t=>t.j.length<SIZES[t.size].cap);if(!t){toast('빈 자리가 있는 수조가 없어요');return false}t.j.push(mkJ(sp));codexSp(sp);return true}
 function newTank(size){if(G.tanks.length>=4){toast('작업실에는 수조를 4개까지만 둘 수 있어요');return false}addTank(size);return true}
 function putJellies(sp,n){const free=G.tanks.reduce((a,t)=>a+SIZES[t.size].cap-t.j.length,0);if(free<n){toast(`수조 빈자리가 ${free}칸뿐이에요`);return false}for(let i=0;i<n;i++)putJelly(sp);return true}
-function newTankBuy(size){if(usedSlots()+SIZES[size].slot>(G.slots||3)){toast(`작업실 자리가 부족해요 (${usedSlots()}/${G.slots||3}칸). 확장 공사를 먼저 하세요`);return false}addTank(size);return true}
+function newTankBuy(size){if(usedSlots()+SIZES[size].slot>(G.slots||3)){toast(`작업실 자리가 부족해요 (${usedSlots()}/${G.slots||3}칸). 확장 공사를 먼저 하세요`);return false}if(!findSpot(size)){toast('빈 칸이 이어져 있지 않아요. 배치 변경으로 수조를 옮겨 자리를 만드세요');return false}addTank(size);return true}
 const SHOP={
   jg:{n:'회색 해파리 ×1',p:12,sp:'gray',f:()=>putJellies('gray',1)},
   jg6:{n:'회색 해파리 ×6',p:66,sp:'gray',f:()=>putJellies('gray',6)},
   cg:{n:'그레이 큐브 ×5',p:10,cube:'gray',f:()=>{G.cubes.gray+=5}},
   cg25:{n:'그레이 큐브 ×25 (정기 방문 특가)',p:45,cube:'gray',f:()=>{G.cubes.gray+=25}},
-  ts:{n:'소형 수조 (6마리 · 1칸) · 주 25',p:40,f:()=>newTankBuy('s')},
-  tm:{n:'중형 수조 (12마리 · 2칸) · 주 50',p:80,f:()=>newTankBuy('m')},
-  tl:{n:'대형 수조 (24마리 · 3칸) · 주 100',p:160,f:()=>newTankBuy('l')},
+  ts:{n:'소형 수조 설치 (6마리 · 1칸 · 주 렌트 25)',p:40,f:()=>newTankBuy('s')},
+  tm:{n:'중형 수조 설치 (12마리 · 2칸 · 주 렌트 50)',p:80,f:()=>newTankBuy('m')},
+  tl:{n:'대형 수조 설치 (24마리 · 3칸 · 주 렌트 100)',p:160,f:()=>newTankBuy('l')},
 };
 const BM={
   cb:{n:'브라운 큐브 ×5',p:20,cube:'brown',f:()=>{G.cubes.brown+=5}},
@@ -764,18 +1027,20 @@ function harvest(jid,from){
   log(`${SP[j.sp].n} 해파리를 건져 작업장으로 보냄 (원재료 ${G.raw.length})`);
   renderAll();checkRescue();if(dirty){dirty=false;renderAll()}
 }
-function cookRaw(i){
-  if(G.pot.length>=4){toast('가마솥이 가득 찼어요. 완성될 때까지 기다리세요');return false}
-  const j=(G.raw||[]).splice(i,1)[0];if(!j)return false;G.pot.push({sp:j.sp,start:T(),end:T()+120});
-  log(`${SP[j.sp].n} 해파리를 고압 가마솥에 투입 (2시간)`,'mars');return true
-}
+function potFix(){if(!Array.isArray(G.pot))G.pot=[];const a=G.pot.filter(Boolean).slice(0,4);G.pot=[0,1,2,3].map(i=>G.pot.length===4?G.pot[i]:a[i]||null)}
+function cookInto(ri,pi){potFix();if(G.pot[pi]){toast('그 가마솥은 사용 중이에요');return false}
+  const j=(G.raw||[]).splice(ri,1)[0];if(!j)return false;G.pot[pi]={sp:j.sp,start:T(),end:T()+120};
+  log(`${SP[j.sp].n} 해파리를 가마솥 ${pi+1}에 투입 (2시간)`,'mars');return true}
+function collectPot(pi){const p=G.pot[pi];if(!p||!p.done)return false;G.ong[p.sp]=(G.ong[p.sp]||0)+3;G.pot[pi]=null;G.flags.cooked=1;(G.popQ=G.popQ||[]).push({sp:p.sp,from:pi});log(`가마솥 ${pi+1}에서 ${SP[p.sp].n} 우해옹 3알을 꺼내 캡슐에 보관`,'ok');return true}
+function cookRaw(i){potFix();const pi=G.pot.findIndex(x=>!x);if(pi<0){toast('빈 가마솥이 없어요');return false}return cookInto(i,pi)}
+function setSpeed(v){if(v===0){paused=true}else{speed=v;paused=!!(G&&G.over)}const cur=paused?'0':String(speed);
+  document.querySelectorAll('[data-speed]').forEach(b=>b.classList.toggle('on',b.dataset.speed===cur));const c=$('#spCyc');if(c)c.textContent=paused?'‖':speed+'×'}
 document.addEventListener('click',e=>{
-  const sb=e.target.closest('[data-speed]');if(sb){speed=+sb.dataset.speed;paused=speed===0||G.over;document.querySelectorAll('[data-speed]').forEach(b=>b.classList.toggle('on',b===sb));if(speed===0)speed=4,paused=true;return}
+  const sb=e.target.closest('[data-speed]');if(sb){setSpeed(+sb.dataset.speed);return}
   const tb=e.target.closest('[data-tab]');if(tb){setTab(tb.dataset.tab);return}
   const b=e.target.closest('[data-act]');
   if(!b){
     if(sel){const w=e.target.closest('.water');const p=e.target.closest('#sendZone');
-      if(w&&!e.target.closest('.jelly')){const s=sel;sel=null;hideJPop();moveJelly(s.jid,s.tid,+w.dataset.tid);return}
       if(p){const s=sel;sel=null;hideJPop();harvest(s.jid,s.tid);return}
       if(!e.target.closest('.jelly,#jpop')){sel=null;markSel();hideJPop()}}
     return;
@@ -792,7 +1057,7 @@ document.addEventListener('click',e=>{
     case'buy':{const it=SHOP[id];if(!G.vanHere){toast('본사 밴이 도착해야 살 수 있어요');return}if(G.cash-it.p<-LIMIT){toast(`잔고가 -${won(LIMIT)}Ⓜ 아래로 내려가는 주문은 할 수 없어요`);return}if(it.f()!==false){G.cash-=it.p;log(`본사 밴에서 ${it.n} 구매 (−${it.p}Ⓜ)`);renderAll();showVan()}break}
     case'bm':{const it=BM[id];if(!bmOpen()){toast('암시장은 잔고가 마이너스일 때 24:00–24:40에만 열려요');return}if(G.dark<it.p){toast('다크 마스가 부족해요');return}if(it.f()!==false){G.dark-=it.p;log(`암시장에서 ${it.n} 입수 (−${it.p} d-Ⓜ)`,'toxic');renderAll();showBM()}break}
     case'bmSell':{if(!bmOpen())return;let got=0,n=0;for(const k of BM_WANT){if(G.ong[k]){got+=Math.round(SP[k].price*1.8)*G.ong[k];n+=G.ong[k];delete G.ong[k]}}if(!got){toast('브로커가 원하는 우해옹이 없어요');return}G.dark+=got;G.flags.dark=1;G.bmLine=`거래 승인. 품목 ${n}개 수령. 다크 마스 ${got} 송금 완료.`;log(`암시장에 우해옹 ${n}알 처분 (+${got} d-Ⓜ)`,'toxic');renderAll();showBM();break}
-    case'bmClose':G.bmActive=false;$('#modal').hidden=true;log('브로커와의 거래 종료. 오늘 밤 암시장은 닫혔습니다','toxic');renderAll();break;
+    case'bmClose':G.bmActive=false;CART={ctx:'',q:{}};$('#modal').hidden=true;log('브로커와의 거래 종료. 오늘 밤 암시장은 닫혔습니다','toxic');renderAll();break;
     case'launder':{if(!bmOpen()||!G.dark)return;const amt=id==='all'?G.dark:Math.min(+id,G.dark);const c=Math.floor(amt*G.bmRate);G.dark-=amt;G.cash+=c;G.flags.dark=1;
       log(`다크 마스 ${amt} 세탁 → 현금 +${c}Ⓜ (환율 ${Math.round(G.bmRate*100)}%)`,'toxic');
       G.bmLine=G.cash>=0?'잔고 플러스 전환 감지. 거래 자격 상실. 다음 접속 조건: 잔고 마이너스.':'세탁 완료. 거래 기록 삭제됨.';renderAll();showBM();if(G.cash>=0&&!G.cleared){G.bmActive=false;checkWin()}break}
@@ -800,13 +1065,16 @@ document.addEventListener('click',e=>{
     case'keepGoing':$('#modal').hidden=true;paused=false;break;
     case'load':{if(G.truck.out)return;let n=sum(G.truck.cargo);for(const sp in G.ong){const k=Math.min(G.ong[sp],30-n);if(k<=0)break;G.truck.cargo[sp]=(G.truck.cargo[sp]||0)+k;G.ong[sp]-=k;n+=k;if(!G.ong[sp])delete G.ong[sp]}renderAll();break}
     case'unload':{if(G.truck.out)return;for(const sp in G.truck.cargo)G.ong[sp]=(G.ong[sp]||0)+G.truck.cargo[sp];G.truck.cargo={};renderAll();break}
-    case'dispatch':{if(G.truck.out)return;if(G.m<360||G.m>=720){toast('배차는 아침 06:00–12:00에만 가능해요');return}const pl=planLoad(),n=sum(pl);if(!n){toast('실을 우해옹이 없어요');return}for(const sp in pl){G.ong[sp]-=pl[sp];if(!G.ong[sp])delete G.ong[sp]}G.truck.cargo=pl;G.truck.out=true;G.truck.dep=T();G.truck.ret=(G.sol-1)*DAY+1140;G.flags.dispatched=1;$('#modal').hidden=true;log(`푸드트럭 배차 출발 — 우해옹 ${n}개 자동 적재, 19:00 복귀 예정`,'mars');renderAll();break}
-    case'truck':showTruck();break;
-    case'vanClose':G.vanHere=false;$('#modal').hidden=true;log('본사 밴 출발. 다음 정기 방문은 다음 주 월요일 08:00');renderAll();break;
+    case'dispatch':{CART.ctx==='trk'||(CART={ctx:'',q:{}});if(G.truck.out)return;if(G.m<360||G.m>=720){toast('배차는 아침 06:00–12:00에만 가능해요');return}const pl=truckLoad(),n=sum(pl);if(!n){toast('실을 우해옹을 골라 주세요');return}for(const sp in pl){G.ong[sp]-=pl[sp];if(!G.ong[sp])delete G.ong[sp]}G.truck.cargo=pl;G.truck.out=true;G.truck.dep=T();G.truck.ret=(G.sol-1)*DAY+1140;G.flags.dispatched=1;$('#modal').hidden=true;log(`푸드트럭 배차 출발 — 우해옹 ${n}개 적재, 19:00 복귀 예정`,'mars');renderAll();break}
+    case'truck':$('#modal').hidden=true;showTruck();break;
+    case'vanClose':G.vanHere=false;vanTab='sup';CART={ctx:'',q:{}};$('#modal').hidden=true;log('본사 밴 출발. 다음 정기 방문은 다음 주 월요일 08:00');renderAll();break;
     case'receipt':showReceipt();break;
-    case'closeModal':$('#modal').hidden=true;if(G&&G.rescueHtml){const h=G.rescueHtml;G.rescueHtml=null;modal(h);break}if(G&&G.tanks.length&&G.cash>=0&&!G.cleared)checkWin();break;
+    case'closeModal':$('#modal').hidden=true;CART={ctx:'',q:{}};if(G&&G.rescueHtml){const h=G.rescueHtml;G.rescueHtml=null;modal(h);break}if(G&&G.mq&&G.mq.length){modal(G.mq.shift());break}if(G&&G.tanks.length&&G.cash>=0&&!G.cleared)checkWin();break;
     case'restart':$('#modal').hidden=true;G.over=false;newGame();begin();break;
-    case'help':showHelp();break;
+    case'help':showHelp('rules');break;
+    case'helpTabs':showHelp('now');break;
+    case'helpTab':showHelp(id);break;
+    case'coachToggle':coachOff=!coachOff;if(coachOff)$('#coach').hidden=true;else lastCoach=null,renderCoach();showHelp('tut');break;
     case'van':if(G.vanHere)showVan();else showVanStatus();break;
     case'delivery':showDelivery();break;
     case'dlvOrder':{const c=DLVPRICE[id];if(G.cash-c<-LIMIT){toast(`잔고가 -${won(LIMIT)}Ⓜ 아래로 내려가는 주문은 할 수 없어요`);return}G.cash-=c;
@@ -815,34 +1083,112 @@ document.addEventListener('click',e=>{
     case'truckRest':$('#modal').hidden=true;log('오늘은 푸드트럭을 쉬게 했습니다');renderAll();break;
     case'jcook':if(sel){const s2=sel;sel=null;hideJPop();harvest(s2.jid,s2.tid)}break;
     case'cookRaw':if(cookRaw(+id))renderAll();break;
-    case'fillPot':{let n=0;while(G.raw&&G.raw.length&&G.pot.length<4){cookRaw(0);n++}if(!n)toast('가마솥이 가득 찼거나 원재료가 없어요');renderAll();break}
+    case'fillPot':{let n=0;while(G.raw&&G.raw.length&&G.pot.some(x=>!x)){cookRaw(0);n++}if(!n)toast('가마솥이 가득 찼거나 원재료가 없어요');renderAll();break}
     case'jclose':sel=null;markSel();hideJPop();break;
     case'thaw':{let n=0;while((G.frozen||[]).length){const t=G.tanks.find(t=>t.j.length<SIZES[t.size].cap);if(!t)break;const j=G.frozen.shift();j.y=.1;t.j.push(j);n++}
-      if(!n){toast('빈자리가 있는 수조가 없어요');return}log(`동결 해파리 ${n}마리 해동${G.frozen.length?` (남은 ${G.frozen.length}마리)`:''}`,'ok');renderAll();break}
+      if(!n){toast('빈자리가 있는 수조가 없어요');return}log(`동결 해파리 ${n}마리 해동${G.frozen.length?` (남은 ${G.frozen.length}마리)`:''}`,'ok');$('#modal').hidden=true;toast(`${n}마리 해동했어요`);renderAll();break}
     case'expand':{const sl=G.slots||3;if(!G.vanHere||sl>=MAXSLOT)return;const c=EXPCOST[(sl-3)/3];if(G.cash-c<-LIMIT){toast(`잔고가 -${won(LIMIT)}Ⓜ 아래로 내려가는 주문은 할 수 없어요`);return}
       G.cash-=c;G.slots=sl+3;log(`작업실 확장 공사 — ${sl} → ${G.slots}칸 (−${c}Ⓜ)`,'mars');renderAll();showVan();break}
-    case'huntGo':startHunt();break;
+    case'huntGo':askHunt();break;
+    case'huntStart':startHunt();break;
     case'huntQuit':huntEnd(true);break;
     case'huntClose':$('#hunt').hidden=true;HN=null;renderAll();break;
-    case'skip':{if(G.over)return;let g=0;do{stepMinute();g++}while(G.m!==360&&$('#modal').hidden&&!G.over&&g<DAY);dirty=false;renderAll();break}
+    case'cq':{const d=+b.dataset.d;CART.q[id]=Math.max(0,(CART.q[id]||0)+d);({van:showVan,dlv:showDelivery,bm:showBM,trk:showTruck})[CART.ctx]();break}
+    case'tkAll':{const k=id,oth=sum(CART.q)-cq(k);CART.q[k]=Math.max(0,Math.min(G.ong[k]||0,capT()-oth));showTruck();break}
+    case'tkAuto':CART.q=planLoad();showTruck();break;
+    case'tkClr':CART.q={};showTruck();break;
+    case'tkPick':$('#modal').hidden=true;showTruck();break;
+    case'vanTab':showVan(id);break;
+    case'cqAll':BM_WANT.forEach(k=>{if(G.ong[k])CART.q['s_'+k]=G.ong[k]});showBM();break;
+    case'cartClear':CART.q={};({van:showVan,dlv:showDelivery,bm:showBM})[CART.ctx]();break;
+    case'cartOk':{if(CART.ctx==='van'){if(!G.vanHere)return;const items=vanItems().sort((a,b)=>(b.rm?1:0)-(a.rm?1:0)),bought=[];let spent=0;
+        for(const x of items){for(let i=0;i<cq(x.k);i++){if(G.cash-x.p<-LIMIT)break;if(x.run()===false)break;G.cash-=x.p;spent+=x.p;bought.push(x)}}
+        const sum2={};bought.forEach(x=>sum2[x.n]=(sum2[x.n]||0)+1);if(spent)log(`본사 밴 발주 — ${Object.entries(sum2).map(([n,c])=>n+(c>1?' ×'+c:'')).join(', ')} (−${spent}Ⓜ)`,'mars');
+        CART.q={};renderAll();showVan();if(spent)toast(`발주 완료 · −${spent}Ⓜ`)}
+      else if(CART.ctx==='dlv'){let spent=0,n=0;for(const [k,c] of Object.entries(DLVPRICE)){const q=cq(k);for(let i=0;i<q;i++){if(G.cash-c<-LIMIT)break;G.cash-=c;spent+=c;n+=DLVPACK;
+          if(!G.delivery)G.delivery={at:T(),arrive:(G.m<480?G.sol-1:G.sol)*DAY+480,items:{}};G.delivery.items[k]=(G.delivery.items[k]||0)+DLVPACK}}
+        if(spent){G.flags.ordered=1;log(`우주용달 먹이 배송 신청 — 그레이 큐브 ×${n} (−${spent}Ⓜ)`,'mars');toast(`주문 완료 · 큐브 ${n}개`)}CART.q={};renderAll();showDelivery()}
+      break}
+    case'bmSellOk':{if(!bmOpen())return;let got=0,n=0;for(const k of BM_WANT){const q=Math.min(cq('s_'+k),G.ong[k]||0);if(!q)continue;got+=Math.round(SP[k].price*1.8)*q;n+=q;G.ong[k]-=q;if(!G.ong[k])delete G.ong[k];delete CART.q['s_'+k]}
+      if(!n)return;G.dark+=got;G.flags.dark=1;G.bmLine=`거래 승인. 품목 ${n}개 수령. 다크 마스 ${got} 송금 완료.`;log(`암시장에 우해옹 ${n}알 처분 (+${got} d-Ⓜ)`,'toxic');renderAll();showBM();break}
+    case'bmBuyOk':{if(!bmOpen())return;const buy=bmBuyItems();let spent=0;const got=[];for(const x of buy){for(let i=0;i<cq(x.k);i++){if(G.dark<x.p)break;if(x.run()===false)break;G.dark-=x.p;spent+=x.p;got.push(x.n)}delete CART.q[x.k]}
+      if(spent){log(`암시장에서 ${got.join(', ')} 입수 (−${spent} d-Ⓜ)`,'toxic');toast(`입수 완료 · −${spent} d-Ⓜ`)}renderAll();showBM();break}
+    case'launderOk':{if(!bmOpen()||!G.dark)return;const amt=Math.min(cq('l')*10,G.dark);if(!amt)return;const c=Math.floor(amt*G.bmRate);G.dark-=amt;G.cash+=c;G.flags.dark=1;delete CART.q.l;
+      log(`다크 마스 ${amt} 세탁 → 현금 +${c}Ⓜ (환율 ${Math.round(G.bmRate*100)}%)`,'toxic');
+      G.bmLine=G.cash>=0?'잔고 플러스 전환 감지. 거래 자격 상실. 다음 접속 조건: 잔고 마이너스.':'세탁 완료. 거래 기록 삭제됨.';renderAll();showBM();if(G.cash>=0&&!G.cleared){G.bmActive=false;checkWin()}break}
+    case'jsend':if(sel){const s2=sel;sel=null;hideJPop();showSend(s2.tid,s2.jid)}break;
+    case'send':showSend(+id);break;
+    case'spT':SEND.pick[id]=!SEND.pick[id];showSend(SEND.tid);break;
+    case'spAll':{const t=G.tanks.find(x=>x.id===SEND.tid);t.j.forEach(j=>SEND.pick[j.id]=1);showSend(SEND.tid);break}
+    case'spCol':{const t=G.tanks.find(x=>x.id===SEND.tid);SEND.pick={};t.j.forEach(j=>{if(j.sp===id)SEND.pick[j.id]=1});showSend(SEND.tid);break}
+    case'spNone':SEND.pick={};showSend(SEND.tid);break;
+    case'spD':SEND.dest=id;showSend(SEND.tid);break;
+    case'spGo':{const t=G.tanks.find(x=>x.id===SEND.tid);if(!t)break;const ids=t.j.filter(j=>SEND.pick[j.id]).map(j=>j.id);let n=0;
+      if(SEND.dest==='kit'){ids.forEach(jid=>{const i=t.j.findIndex(j=>j.id===jid);if(i<0)return;const j=t.j.splice(i,1)[0];delete j.dye;(G.raw=G.raw||[]).push(j);n++});if(n){G.flags.harvested=1;log(`TANK-${String(t.id).padStart(2,'0')}에서 해파리 ${n}마리를 건져 작업장으로 보냄`)}}
+      else{const dt=G.tanks.find(x=>x.id===+SEND.dest);ids.forEach(jid=>{if(dt.j.length>=SIZES[dt.size].cap)return;const i=t.j.findIndex(j=>j.id===jid);if(i<0)return;const j=t.j.splice(i,1)[0];j.y=.1;dt.j.push(j);n++});
+        if(n)log(`해파리 ${n}마리를 TANK-${String(t.id).padStart(2,'0')} → TANK-${String(dt.id).padStart(2,'0')}로 옮김`)}
+      SEND={tid:0,pick:{},dest:''};$('#modal').hidden=true;toast(`${n}마리 보냈어요`);renderAll();checkRescue();if(dirty){dirty=false;renderAll()}break}
+    case'layout':LAY=null;showLayout();break;
+    case'layT':LAY.sel=LAY.sel===+id?null:+id;showLayout();break;
+    case'layC':{if(!LAY.sel)break;const [r,c]=id.split(',').map(Number),t=G.tanks.find(x=>x.id===LAY.sel),sp=SIZES[t.size].slot,rows=(G.slots||3)/3;
+      const occ={};G.tanks.forEach(x=>{if(x.id===t.id)return;const p=LAY.pos[x.id];for(let i=0;i<SIZES[x.size].slot;i++)occ[p.r+','+(p.c+i)]=x.id});
+      let ok=r<rows&&c+sp<=MCOLS;for(let i=0;ok&&i<sp;i++)if(occ[r+','+(c+i)]!==undefined)ok=false;if(!ok){toast('거기엔 놓을 수 없어요');break}
+      LAY.pos[t.id]={r,c};LAY.sel=null;showLayout();break}
+    case'layOk':G.tanks.forEach(t=>t.pos=LAY.pos[t.id]);LAY=null;$('#modal').hidden=true;log('연구실 수조 배치를 바꿨습니다');renderAll();break;
+    case'layCancel':LAY=null;$('#modal').hidden=true;break;
+    case'zoom':{const zs=[.5,.65,.8,1];let i=zs.indexOf(mapZ);i=Math.max(0,Math.min(zs.length-1,i+(+id)));mapZ=zs[i];renderTanks();break}
+    case'feed':$('#modal').hidden=true;showFeed();break;
+    case'feedSet':{const [tid,k]=id.split(':'),t=G.tanks.find(x=>x.id===+tid);if(!t)break;if(t.food===k){showFeed();break}t.food=k;if(t.on&&G.cubes[k]<t.j.length){t.on=false;toast(`${CUBE[k].n} 재고가 하루치(${t.j.length}개)보다 적어 배식을 껐어요`)}renderAll();showFeed();break}
+    case'feedTog':{const t=G.tanks.find(x=>x.id===+id);if(!t)break;if(!t.on){if(!t.food){toast('먼저 먹이 큐브를 고르세요');break}if(G.cubes[t.food]<Math.max(1,t.j.length)){toast(`${CUBE[t.food].n} 재고가 부족해요 (하루 ${t.j.length}개 필요)`);break}t.on=true;G.flags.fedOnce=1}else t.on=false;renderAll();showFeed();break}
+    case'feedAll':{G.tanks.forEach(t=>{t.food=id;if(t.j.length&&G.cubes[id]>=t.j.length){t.on=true;G.flags.fedOnce=1}});renderAll();showFeed();break}
+    case'frozen':showFrozen();break;
+    case'menuBoard':showMenuBoard();break;
+    case'log':showLog();break;
+    case'skip':{if(G.over)return;$('#modal').hidden=true;let g=0;do{stepMinute();g++}while(G.m!==360&&$('#modal').hidden&&!G.over&&g<DAY);dirty=false;renderAll();break}
     case'codex':G.codexNew=0;renderHeader();showCodex();break;
-    case'coachOff':coachOff=true;renderCoach();break;
+    case'coachOff':coachOff=true;$('#coach').hidden=true;break;
+    case'spcycle':{const order=[0,1,4,12],cur=paused?0:speed;setSpeed(order[(order.indexOf(cur)+1)%4]);break}
+    case'coachHide':$('#coach').hidden=true;break;
+    case'coachShow':$('#modal').hidden=true;coachOff=false;if(G.coachS){$('#coachText').innerHTML=G.coachS;$('#coach').hidden=false;clearTimeout(coachT);coachT=setTimeout(()=>$('#coach').hidden=true,10000)}else toast('지금은 따로 안내할 게 없어요');break;
   }
 });
 document.addEventListener('change',e=>{const s=e.target.closest('select[data-tank]');if(!s)return;const t=G.tanks.find(t=>t.id===+s.dataset.tank);t.food=s.value||null;if(!t.food)t.on=false;renderAll()});
 
 /* drag & tap */
-let drag=null;
-document.addEventListener('pointerdown',e=>{const j=e.target.closest('.jelly');if(!j||G.over)return;e.preventDefault();drag={jid:+j.dataset.id,tid:+j.dataset.tank,sx:e.clientX,sy:e.clientY,moved:false,src:j,sp:j.dataset.sp}});
-document.addEventListener('pointermove',e=>{if(!drag)return;
-  if(!drag.moved&&Math.hypot(e.clientX-drag.sx,e.clientY-drag.sy)>6){drag.moved=true;const g=document.createElement('div');g.className='ghost sp-'+drag.sp;document.body.appendChild(g);drag.g=g;drag.src.classList.add('ghosted');sel=null;markSel();hideJPop()}
-  if(drag.moved){drag.g.style.left=e.clientX-24+'px';drag.g.style.top=e.clientY-24+'px';
-    document.querySelectorAll('.target').forEach(x=>x.classList.remove('target'));const el=document.elementFromPoint(e.clientX,e.clientY);const w=el&&el.closest('.water,#sendZone');if(w)w.classList.add('target')}});
-document.addEventListener('pointerup',e=>{if(!drag)return;const d=drag;drag=null;document.querySelectorAll('.target').forEach(x=>x.classList.remove('target'));
-  if(d.moved){d.g.remove();d.src.classList.remove('ghosted');const el=document.elementFromPoint(e.clientX,e.clientY);
-    const w=el&&el.closest('.water'),p=el&&el.closest('#sendZone');if(p)harvest(d.jid,d.tid);else if(w)moveJelly(d.jid,d.tid,+w.dataset.tid)}
-  else{sel=sel&&sel.jid===d.jid?null:{jid:d.jid,tid:d.tid};markSel();if(sel)showJPop(d.jid,d.src);else hideJPop()}});
-document.addEventListener('pointercancel',()=>{if(drag&&drag.g)drag.g.remove();if(drag)drag.src.classList.remove('ghosted');drag=null});
+let kd=null;
+document.addEventListener('pointerdown',e=>{const el=e.target.closest('[data-drag]');if(!el||!e.target.closest('#viewKit')||G.over)return;e.preventDefault();
+  kd={kind:el.dataset.drag,id:+el.dataset.id,sx:e.clientX,sy:e.clientY,moved:false,el}});
+document.addEventListener('pointermove',e=>{if(!kd)return;if(!kd.moved&&Math.hypot(e.clientX-kd.sx,e.clientY-kd.sy)>5){kd.moved=true;const g=document.createElement(kd.kind==='raw'?'span':'img');
+    if(kd.kind==='raw'){g.className='kghost raw-d '+[...kd.el.classList].find(c=>c.startsWith('sp-'))}else{g.className='kghost';g.src=SP[G.pot[kd.id].sp].o;g.style.width='34px';g.style.height='34px'}
+    document.body.appendChild(g);kd.g=g;kd.el.classList.add('dragging');document.querySelectorAll(kd.kind==='raw'?'.pot-st.empty':'.caps').forEach(x=>x.classList.add('dropok'))}
+  if(kd.moved){kd.g.style.left=e.clientX-18+'px';kd.g.style.top=e.clientY-24+'px';document.querySelectorAll('.dropover').forEach(x=>x.classList.remove('dropover'));const t=document.elementFromPoint(e.clientX,e.clientY);const z=t&&t.closest(kd.kind==='raw'?'.pot-st.empty':'.caps');if(z)z.classList.add('dropover')}});
+document.addEventListener('pointerup',e=>{if(!kd)return;const d=kd;kd=null;document.querySelectorAll('.dropok,.dropover').forEach(x=>x.classList.remove('dropok','dropover'));d.el.classList.remove('dragging');
+  if(!d.moved){toast(d.kind==='raw'?'해파리를 빈 가마솥으로 끌어다 넣으세요':'완성된 솥을 캡슐로 끌어다 넣으세요');return}d.g.remove();const t=document.elementFromPoint(e.clientX,e.clientY);
+  if(d.kind==='raw'){const z=t&&t.closest('.pot-st');if(z&&cookInto(d.id,+z.dataset.pot))renderAll()}
+  else{const z=t&&t.closest('.caps');if(z&&collectPot(d.id))renderAll()}});
+document.addEventListener('pointercancel',()=>{if(kd){if(kd.g)kd.g.remove();kd.el.classList.remove('dragging');document.querySelectorAll('.dropok,.dropover').forEach(x=>x.classList.remove('dropok','dropover'))}kd=null});
+let jd=null,jdRaf=0;
+function jdClean(){document.querySelectorAll('.tank.dropok,.tank.dropover,.tank.dropno,.kitdrop').forEach(x=>{if(x.classList.contains('kitdrop'))x.remove();else x.classList.remove('dropok','dropover','dropno')});document.querySelectorAll('.jelly.ghosted').forEach(x=>x.classList.remove('ghosted'));document.querySelectorAll('.ghost').forEach(x=>x.remove());cancelAnimationFrame(jdRaf);document.body.classList.remove('jdragging')}
+function jdTarget(x,y){const t=document.elementFromPoint(x,y);if(!t)return null;if(t.closest('.kitdrop'))return{kit:1,el:t.closest('.kitdrop')};const a=t.closest('.tank.mapt');if(!a)return null;return{tid:+a.dataset.tid,el:a}}
+document.addEventListener('pointerdown',e=>{const j=e.target.closest('#labmap .jelly');if(!j||G.over||e.button>0)return;e.preventDefault();
+  jd={sx:e.clientX,sy:e.clientY,x:e.clientX,y:e.clientY,moved:false,el:j,jid:+j.dataset.id,tid:+j.dataset.tank,sp:j.dataset.sp}});
+function jdLoop(){if(!jd||!jd.moved)return;const H=innerHeight,y=jd.y;let v=0;if(y<70)v=-Math.ceil((70-y)/5);else if(y>H-110)v=Math.ceil((y-(H-110))/5);if(v){scrollBy(0,v);jdHover()}jdRaf=requestAnimationFrame(jdLoop)}
+function jdHover(){document.querySelectorAll('.tank.dropover,.kitdrop.dropover').forEach(x=>x.classList.remove('dropover'));const z=jdTarget(jd.x,jd.y);if(z&&z.el.classList.contains('dropok'))z.el.classList.add('dropover')}
+document.addEventListener('pointermove',e=>{if(!jd)return;jd.x=e.clientX;jd.y=e.clientY;
+  if(!jd.moved&&Math.hypot(e.clientX-jd.sx,e.clientY-jd.sy)>6){jd.moved=true;sel=null;markSel();hideJPop();document.body.classList.add('jdragging');
+    const g=document.createElement('i');g.className='ghost sp-'+jd.sp;document.body.appendChild(g);jd.g=g;jd.el.classList.add('ghosted');
+    document.querySelectorAll('#labmap .tank.mapt').forEach(a=>{const t=G.tanks.find(x=>x.id===+a.dataset.tid);if(!t||t.id===jd.tid)return;a.classList.add(t.j.length<SIZES[t.size].cap?'dropok':'dropno')});
+    const k=document.createElement('div');k.className='kitdrop dropok';k.innerHTML='<b>작업장으로 건지기</b><small>여기에 놓으면 원재료로 보내요</small>';document.body.appendChild(k);jdRaf=requestAnimationFrame(jdLoop)}
+  if(jd.moved){jd.g.style.left=e.clientX-24+'px';jd.g.style.top=e.clientY-34+'px';jdHover()}});
+function moveJelly(jid,from,to){const t=G.tanks.find(x=>x.id===from);if(!t)return false;const i=t.j.findIndex(j=>j.id===jid);if(i<0)return false;
+  if(to==='kit'){const j=t.j.splice(i,1)[0];delete j.dye;(G.raw=G.raw||[]).push(j);G.flags.harvested=1;log(`T${String(t.id).padStart(2,'0')}에서 ${SP[j.sp].n} 해파리를 건져 작업장으로 보냄`);toast(`${SP[j.sp].n} 해파리 → 작업장 냉장고`);return true}
+  const dt=G.tanks.find(x=>x.id===to);if(!dt||dt===t)return false;if(dt.j.length>=SIZES[dt.size].cap){toast(`T${String(dt.id).padStart(2,'0')} 수조가 꽉 찼어요`);return false}
+  const j=t.j.splice(i,1)[0];j.y=.1;dt.j.push(j);log(`${SP[j.sp].n} 해파리를 T${String(t.id).padStart(2,'0')} → T${String(dt.id).padStart(2,'0')}로 옮김`);return true}
+document.addEventListener('pointerup',e=>{if(!jd)return;const d=jd;jd=null;
+  if(!d.moved){jdClean();sel=sel&&sel.jid===d.jid?null:{jid:d.jid,tid:d.tid};markSel();if(sel)showJPop(d.jid,d.el);else hideJPop();return}
+  const z=jdTarget(e.clientX,e.clientY);jdClean();
+  if(z&&moveJelly(d.jid,d.tid,z.kit?'kit':z.tid)){renderAll();checkRescue();if(dirty){dirty=false;renderAll()}}});
+document.addEventListener('pointercancel',()=>{if(jd){jd=null;jdClean()}});
 function hideJPop(){$('#jpop').hidden=true}
 function showJPop(jid,el){let j,t;for(const tk of G.tanks){const f=tk.j.find(x=>x.id===jid);if(f){j=f;t=tk;break}}if(!j)return hideJPop();
   const fed=j.fed||0,fast=j.fast||0,hist=(j.hist||[]).slice(-5);
@@ -851,8 +1197,7 @@ function showJPop(jid,el){let j,t;for(const tk of G.tanks){const f=tk.j.find(x=>
   <div>최근 기록${hist.length?`<span class="dots">${hist.map(k=>k==='x'?'<i class="fdot" title="굶음"></i>':cubeI(k)).join('')}</span>`:' <span class="muted">없음</span>'}</div>
   ${known('breed')?`<div>짝 준비 <span class="num" style="color:#ff9bb4">${Math.min(fed,3)}/3</span>일</div>`:''}
   ${st.length?`<div class="st">${st.join('<br>')}</div>`:''}
-  <div class="muted">다른 수조를 누르면 그쪽으로 옮겨요</div>
-  <div class="btn-row"><button class="btn sm hot" data-act="jcook">건져서 작업장으로</button><button class="btn sm" data-act="jclose">닫기</button></div>`;
+  <div class="btn-row"><button class="btn sm hot" data-act="jsend">보내기…</button><button class="btn sm" data-act="jclose">닫기</button></div>`;
   p.hidden=false;const r=el.getBoundingClientRect(),W=innerWidth,H=innerHeight,pw=216,ph=p.offsetHeight;
   let x=r.right+8;if(x+pw>W-8)x=Math.max(8,r.left-pw-8);let y=Math.min(Math.max(8,r.top-10),H-ph-8);p.style.left=x+'px';p.style.top=y+'px'}
 function markSel(){document.querySelectorAll('.jelly').forEach(el=>el.classList.toggle('sel',!!sel&&+el.dataset.id===sel.jid))}
@@ -860,101 +1205,108 @@ function markSel(){document.querySelectorAll('.jelly').forEach(el=>el.classList.
 /* ---------- render ---------- */
 function dur(m){m=Math.max(0,Math.round(m));return m>=60?`${Math.floor(m/60)}시간 ${m%60}분`:`${m}분`}
 function renderRoutes(){const now=T(),vm=$('#vanMover'),tm=$('#trkMover');if(!vm)return;
-  tm.src=TRK;const pos=(el,x)=>el.style.left=`calc(${x.toFixed(3)} * (100% - 56px))`;
-  let vs,vx,vcls='';
-  if(G.vanHere){vx=0;vs='작업실 도킹 중';vcls='go'}
-  else if(G.delivery){const p=Math.min(1,(now-G.delivery.at)/Math.max(1,G.delivery.arrive-G.delivery.at));vx=1-p;vcls='go flip';vs=`먹이 배송 중 · ${dur(G.delivery.arrive-now)} 뒤 도착`}
-  else{vx=1;vcls='idle';const dow=(G.sol-1)%7;vs=dow===0&&G.m<480?'정기 방문 · 오늘 08:00':`대기 · 정기 방문 ${7-dow}일 뒤`}
-  vm.src=!G.vanHere&&G.delivery?DLV:VAN;$('#vanLabel').textContent=!G.vanHere&&G.delivery?'우주용달':'본사 밴';
-  vm.className='sprite mover '+vcls;pos(vm,vx);$('#vanStatus').textContent=vs;
-  let ts,tx,tcls='',sell=false;const coin=$('#coin');
-  if(G.truck.out&&G.truck.ret){const dep=G.truck.dep??G.truck.ret-600,p=Math.min(1,(now-dep)/(G.truck.ret-dep));
-    if(p<.2){tx=p/.2;tcls='go';ts='돔 상권으로 출발'}else if(p<.85){tx=1;tcls='go';sell=true;ts=`돔 상권에서 장사 중 · ${sum(G.truck.cargo)}알 · 19:00 복귀`}else{tx=1-(p-.85)/.15;tcls='go flip';ts='작업실로 복귀 중'}}
-  else{tx=0;const n=sum(planLoad()),ok=G.m>=360&&G.m<720;tcls=ok&&n?'':'idle';ts=ok&&n?`배차 가능 · ${n}알 적재 예정`:n?'도킹 대기 · 06:00–12:00 배차':'도킹 대기 · 실을 우해옹 없음'}
-  tm.className='sprite mover '+tcls;pos(tm,tx);$('#trkStatus').textContent=ts;
-  coin.classList.toggle('on',sell);coin.style.left=`calc(${tx.toFixed(3)} * (100% - 56px) + 20px)`;
+  tm.src=TRK;let vs,vp=0,vcls='';
+  if(G.vanHere){vp=1;vs='작업실 도킹 중';vcls='go'}
+  else if(G.delivery){vp=Math.min(1,(now-G.delivery.at)/Math.max(1,G.delivery.arrive-G.delivery.at));vcls='go flip';vs=`먹이 배송 · ${dur(G.delivery.arrive-now)} 뒤`}
+  else{vcls='idle';const dow=(G.sol-1)%7;vs=dow===0&&G.m<480?'정기 방문 오늘 08:00':`정기 방문 ${7-dow}일 뒤`}
+  vm.src=!G.vanHere&&G.delivery?DLV:VAN;vm.parentElement.title=(!G.vanHere&&G.delivery?'우주용달 · ':'본사 밴 · ')+vs;tm.parentElement.title='푸드트럭';
+  vm.className='sprite mm '+vcls;$('#vanStatus').textContent=vs;$('#vanBar').style.width=(vp*100).toFixed(1)+'%';
+  let ts,tp=0,tcls='',sell=false;
+  if(G.truck.out&&G.truck.ret){const dep=G.truck.dep??G.truck.ret-600;tp=Math.min(1,(now-dep)/(G.truck.ret-dep));
+    if(tp<.2){tcls='go';ts='돔 상권으로 출발'}else if(tp<.85){tcls='go';sell=true;ts=`장사 중 · ${sum(G.truck.cargo)}알 · 19:00`}else{tcls='go flip';ts='복귀 중'}}
+  else{const n=sum(planLoad()),ok=G.m>=360&&G.m<720;tcls=ok&&n?'':'idle';ts=ok&&n?`배차 가능 · ${n}알`:n?'대기 · 06–12시 배차':'대기 · 실을 우해옹 없음'}
+  tm.className='sprite mm '+tcls;$('#trkStatus').textContent=ts;$('#trkBar').style.width=(tp*100).toFixed(1)+'%';
+  $('#coin').classList.toggle('on',sell);
 }
 function renderHeader(){
   renderRoutes();
   const dow=(G.sol-1)%7,dead=G.m>=DEAD;
-  $('#clk').textContent=`Sol ${G.sol} · ${fmt(G.m)}`;
-  $('#clkNote').textContent=dead?`마의 40분 · ${DAY-G.m}분 남음`:`${DOW[dow]}요일${G.vanHere?' · 본사 밴 도킹':''}${G.truck.out?' · 트럭 운행 중':''}`;
-  const cb=$('#codexBtn');cb.classList.toggle('new',!!G.codexNew);cb.textContent=G.codexNew?`교배연구도감 +${G.codexNew}`:'교배연구도감';
+  $('#clk').innerHTML=`<span class="sol">S${G.sol} </span>${fmt(G.m)}`;$('#clk').title=`Sol ${G.sol}`;
+  $('#clkNote').textContent=dead?`위성 OFF ${DAY-G.m}분`:DOW[dow];
+  $('#menuBtn').classList.toggle('new',!!G.codexNew);
   $('#tl').style.width=(G.m/DAY*100).toFixed(2)+'%';
-  $('#mCash').textContent=won(G.cash)+' Ⓜ';$('#mCash').parentElement.classList.toggle('neg',G.cash<0);$('#mDark').textContent=won(G.dark)+' d-Ⓜ';$('#darkChip').hidden=!(G.flags&&G.flags.brokerMet);
+  $('#mCash').innerHTML=won(G.cash)+'<span class="u">Ⓜ</span>';$('#mCash').classList.toggle('neg',G.cash<0);$('#mDark').textContent=won(G.dark);$('#darkChip').hidden=!(G.flags&&G.flags.brokerMet);
 }
 function cubeI(k){return`<i class="cube" style="background:${CUBE[k].c}${k==='black'?';box-shadow:0 0 4px var(--toxic)':''}"></i>`}
 function ongI(sp){return`<img class="sprite ong-img" src="${SP[sp].o}" alt="">`}
 function renderLeft(){/* 본사 밴·푸드트럭은 상단 상태창 → 팝업으로만 */}
 function setTab(t){curTab=t;$('#viewTank').hidden=t!=='tank';$('#viewKit').hidden=t!=='kit';$('#tabTank').classList.toggle('on',t==='tank');$('#tabKit').classList.toggle('on',t==='kit');sel=null;hideJPop();if(t==='tank')requestAnimationFrame(()=>placeJellies(true))}
-function renderSide(){
-  const cubes=Object.keys(CUBE).filter(k=>G.cubes[k]>0);
-  $('#side').innerHTML=(stuck()?`<section class="card" style="border-color:var(--danger)"><header class="card-h"><span>해파리 동굴</span><span class="pill warn">비상</span></header><p class="muted" style="margin:0">대출도 막히고 해파리도 없어요. 동굴에서 전기파리채로 직접 잡아 오세요. 하루 한 번.</p><button class="btn hot" data-act="huntGo" ${G.huntSol===G.sol?'disabled':''}>${G.huntSol===G.sol?'오늘은 이미 다녀왔어요':'사냥 가기'}</button></section>`:'')+`<section class="card send" id="sendZone"><header class="card-h"><span>작업장으로 보내기</span><span class="pill">원재료 ${(G.raw||[]).length}</span></header>
-    <p class="muted" style="margin:0">해파리를 여기로 끌어 놓거나, 해파리를 눌러 [건져서 작업장으로]를 고르세요. 작업장에서 졸일 원재료가 됩니다.</p></section>
-  <section class="card"><header class="card-h"><span>먹이 창고</span><span class="pill">자동 스택</span></header>
-    <div class="rows">${cubes.length?cubes.map(k=>`<div class="row"><span class="it">${cubeI(k)}${CUBE[k].n}</span><span class="num">×${G.cubes[k]}</span><span></span></div>`).join(''):'<div class="muted">큐브가 바닥났어요.</div>'}</div>
-    <button class="btn" data-act="delivery">${G.delivery?'우주용달 · 배송 중':'먹이 배송 신청 (우주용달)'}</button>
-    ${(G.frozen||[]).length?`<div class="muted" style="color:var(--glass)">동결 보관함 <small>(먹지도 굶지도 않음)</small></div>
-    <div class="frz">${G.frozen.map(j=>`<span class="frz-j sp-${j.sp}" title="${SP[j.sp].n} 해파리"></span>`).join('')}</div>
-    <button class="btn sm" data-act="thaw">빈 수조로 해동 (${G.frozen.length}마리)</button>`:''}
-  </section>`;
-}
-function renderRight(){
-  const cooking=G.pot.length,raw=G.raw||[];
-  let slots='';for(let i=0;i<4;i++){const p=G.pot[i];slots+=p?`<div class="slot busy" data-slot="${i}">${ongI(p.sp)}<span>${SP[p.sp].n}</span><i class="bar" style="width:0"></i></div>`:`<div class="slot muted">빈 자리</div>`}
-  const ongs=Object.keys(G.ong).filter(k=>G.ong[k]>0);
-  $('#kraw').innerHTML=`<section class="card"><header class="card-h"><span>원재료 대기함</span><span class="pill">${raw.length}마리</span></header>
-    <div class="rawbin">${raw.length?raw.map((j,i)=>`<button class="raw-j sp-${j.sp}" data-act="cookRaw" data-id="${i}" aria-label="${SP[j.sp].n} 해파리 졸이기"></button>`).join(''):'<div class="muted">지하 수조실에서 해파리를 건져 보내면 여기 쌓여요.</div>'}</div>
-    <div class="btn-row"><button class="btn hot" data-act="fillPot" ${raw.length&&cooking<4?'':'disabled'}>가마솥 채우기</button><span class="muted" style="align-self:center">해파리를 누르면 한 마리씩 들어가요</span></div></section>
-  <section class="card pot" id="pot"><header class="card-h"><span>고압 가마솥</span><span class="pill">${cooking}/4</span></header>
-    <div class="pot-wrap"><div class="cauldron ${cooking?'':'idle'}"><img class="sprite pot-img" src="${cooking?POT1:POT0}" alt="${cooking?'끓는 가마솥':'쉬는 가마솥'}"><i class="steam" style="left:30px"></i><i class="steam" style="left:52px;animation-delay:.8s"></i></div>
-    <div class="slots">${slots}</div></div>
-    <p class="muted" style="margin:0">해파리 1마리를 2시간 졸이면 우해옹 3알이 됩니다.</p></section>`;
-  $('#right').innerHTML=`<section class="card"><header class="card-h"><span>우해옹 창고</span><span class="pill">${sum(G.ong)}알</span></header>
-    <div class="rows">${ongs.length?ongs.map(k=>`<div class="row"><span class="it">${ongI(k)}${SP[k].n} <small class="muted">${MENU[k].m}</small></span><span class="num">×${G.ong[k]}</span>${BM_WANT.includes(k)?'<span class="num" style="color:var(--toxic);font-family:var(--f-ui);font-size:12px">판매 금지</span>':`<span class="num muted">~${SP[k].price}</span>`}</div>`).join(''):'<div class="muted">아직 졸인 우해옹이 없어요.</div>'}</div>
-    <div class="muted">오늘의 시장 반응 <small>(손님들은 재료를 모릅니다)</small></div>${marketRows()}
-    <button class="btn hot" data-act="truck">${G.truck.out?'푸드트럭 · 운행 중':'푸드트럭 배차'}</button>
-  </section>
-  <section class="card"><header class="card-h"><span>작업 일지</span></header><div class="log">${G.log.slice(0,14).map(l=>`<div><time>${l.t.replace('Sol ','S')}</time><span class="${l.k}">${l.msg}</span></div>`).join('')}</div></section>`;
+function renderSide(){const f=$('#frzBtn');if(f){const n=(G.frozen||[]).length;f.hidden=!n;f.textContent=`동결 ${n}`}}
+function showFrozen(){const fz=G.frozen||[];
+  modal(`<section class="card"><header class="card-h"><span>동결 보관함</span><button class="btn sm" data-act="closeModal">닫기</button></header>
+  <p class="muted" style="margin:0">압류·철거된 수조에서 옮겨진 해파리예요. 먹지도 굶지도 않습니다.</p>
+  <div class="frz">${fz.map(j=>`<span class="frz-j sp-${j.sp}" title="${SP[j.sp].n} 해파리"></span>`).join('')||'<span class="muted">비어 있어요</span>'}</div>
+  <button class="btn hot" data-act="thaw" ${fz.length?'':'disabled'}>빈 수조로 해동 (${fz.length}마리)</button></section>`)}
+function renderRight(){potFix();
+  const raw=G.raw||[],ongs=Object.keys(G.ong).filter(k=>G.ong[k]>0),tot=sum(G.ong),now=T(),cooking=G.pot.filter(Boolean).length,done=G.pot.filter(p=>p&&p.done).length;
+  const eta=m=>{m=Math.max(0,Math.round(m));return`${Math.floor(m/60)}:${String(m%60).padStart(2,'0')}`};
+  $('#ktools').innerHTML=`<span class="grow"></span><button class="btn xs" data-act="menuBoard">오늘의 메뉴판</button><button class="btn xs" data-act="log">작업 일지</button><button class="btn xs hot" data-act="truck">${G.truck.out?'푸드트럭 · 운행 중':'푸드트럭 배차'}</button>`;
+  $('#kraw').innerHTML=`<div class="dev-h"><span>냉장고</span><b class="num">${raw.length}</b></div><div class="fr-in">${raw.map((j,i)=>`<span class="raw-d sp-${j.sp}" data-drag="raw" data-id="${i}" title="${SP[j.sp].n} 해파리 — 가마솥으로 끌어 넣기"></span>`).join('')||'<small class="muted">비었음</small>'}</div>`;
+  $('#kpot').innerHTML=G.pot.map((p,i)=>{const pr=p?Math.min(1,(now-p.start)/(p.end-p.start)):0;
+    return`<div class="pot-st ${p?(p.done?'done':'busy'):'empty'}" data-pot="${i}" ${p&&p.done?`data-drag="pot" data-id="${i}"`:''}>
+      <span class="ring" style="--p:${(pr*100).toFixed(1)}%" data-ring="${i}"></span>
+      <img class="sprite pimg" src="${p&&!p.done?POT1:POT0}" alt="">
+      ${p?(p.done?`<span class="pdone">${[0,1,2].map(()=>`<img src="${SP[p.sp].o}" alt="">`).join('')}</span><small class="ptxt">완성! 캡슐로</small>`:`<span class="pin">${ongI(p.sp)}</span><small class="ptxt" data-eta="${i}">${eta(p.end-now)}</small>`):`<small class="ptxt muted">빈 솥 ${i+1}</small>`}
+    </div>`}).join('');
+  $('#kshelf').innerHTML=`<div class="dev-h"><span>캡슐</span><b class="num">${tot}</b></div><div class="cap-in" id="ongStore">${ongs.map(k=>`<span class="capm ${BM_WANT.includes(k)?'ban':''}" title="${SP[k].n} · ${MENU[k].m}"><img src="${SP[k].o}" alt=""><b>${G.ong[k]}</b></span>`).join('')||'<small class="muted">비었음</small>'}</div>`;
+  $('#khint').textContent=done?`완성된 가마솥 ${done}개 — 솥을 끌어서 캡슐에 넣으세요.`:raw.length&&cooking<4?'냉장고의 해파리를 빈 가마솥으로 끌어다 넣으세요. 오래 둬도 타지 않아요.':'';
   $('#tankBadge').textContent=G.tanks.reduce((a,t)=>a+t.j.length,0)||'';
-  $('#kitBadge').textContent=(raw.length+sum(G.ong))||'';
+  $('#kitBadge').textContent=(raw.length+tot+done)||'';
   renderPotProg();
 }
-function renderPotProg(){const now=T();document.querySelectorAll('.slot[data-slot]').forEach(el=>{const p=G.pot[+el.dataset.slot];if(p)el.querySelector('.bar').style.width=Math.min(100,(now-p.start)/(p.end-p.start)*100)+'%'})}
+function showMenuBoard(){const ongs=Object.keys(G.ong).filter(k=>G.ong[k]>0);
+  modal(`<section class="card menu" style="background:#1f2a22;border:6px solid #6b4226;color:#e8efe2"><header class="card-h"><span style="font-family:var(--f-logo)">오늘의 메뉴판</span><button class="btn sm" data-act="closeModal">닫기</button></header>
+  <div class="muted" style="color:#a9b8a4">손님 반응 · 손님들은 재료를 모릅니다</div>${marketRows()}
+  <div class="muted" style="color:#a9b8a4">재고와 판매가</div>
+  <div class="rows">${ongs.length?ongs.map(k=>`<div class="row"><span class="it">${ongI(k)}${SP[k].n} <small class="muted">${MENU[k].m}</small></span><span class="num">×${G.ong[k]}</span>${BM_WANT.includes(k)?'<span class="num" style="color:var(--toxic);font-family:var(--f-ui);font-size:12px">판매 금지</span>':`<span class="num muted">~${SP[k].price}</span>`}</div>`).join(''):'<div class="muted">재고가 없어요.</div>'}</div>
+  <button class="btn hot" data-act="truck">${G.truck.out?'푸드트럭 · 운행 중':'푸드트럭 배차'}</button></section>`)}
+function showLog(){modal(`<section class="card"><header class="card-h"><span>작업 일지</span><button class="btn sm" data-act="closeModal">닫기</button></header>
+  <div class="log" style="max-height:60vh">${G.log.slice(0,40).map(l=>`<div><time>${l.t.replace('Sol ','S')}</time><span class="${l.k}">${l.msg}</span></div>`).join('')}</div></section>`)}
+function renderPotProg(){const now=T();document.querySelectorAll('[data-ring]').forEach(el=>{const p=G.pot[+el.dataset.ring];if(p)el.style.setProperty('--p',(Math.min(1,(now-p.start)/(p.end-p.start))*100).toFixed(1)+'%')});document.querySelectorAll('[data-eta]').forEach(el=>{const p=G.pot[+el.dataset.eta];if(p&&!p.done){const m=Math.max(0,Math.round(p.end-now));el.textContent=`${Math.floor(m/60)}:${String(m%60).padStart(2,'0')}`}});document.querySelectorAll('.stage[data-slot],.slot[data-slot]').forEach(el=>{const p=G.pot[+el.dataset.slot];if(p)el.querySelector('.bar').style.width=Math.min(100,(now-p.start)/(p.end-p.start)*100)+'%'})}
 function pips(n,max,on){let s='';for(let i=0;i<max;i++)s+=`<i class="${i<n?'on':''}"></i>`;return s}
-function renderTanks(){
-  $('#tanks').innerHTML=G.tanks.map(t=>{const S=SIZES[t.size],n=t.j.length;
+let mapZ=innerWidth<600?.65:innerWidth<1000?.8:1;
+function renderTanks(){const rows=(G.slots||3)/3,occ=occMap();
+  let cells='';for(let r=0;r<rows;r++)for(let c=0;c<MCOLS;c++){if(occ[r+','+c]===undefined)cells+=`<div class="mcell" style="grid-column:${c+1};grid-row:${r+1}" data-act="van"><b>빈 자리</b><small>수조 설치 가능</small></div>`}
+  const tanks=G.tanks.map(t=>{const S=SIZES[t.size],n=t.j.length;
     const ready=t.j.filter(j=>(j.fed||0)>=2).length,hungry=t.j.filter(j=>(j.fast||0)>0),maxF=hungry.reduce((a,j)=>Math.max(a,j.fast),0);
     let bubbles='';for(let i=0;i<4;i++)bubbles+=`<i class="bubble" style="left:${12+i*23}%;animation-duration:${4+i*1.3}s;animation-delay:${i*.9}s"></i>`;
-    return`<article class="tank" style="--span:${S.slot}"><div class="tank-h"><span>수조 #${t.id} · ${S.n}</span><span class="num">${n}/${S.cap}</span></div>
-    <div class="water" data-tid="${t.id}" style="height:${S.h}px"><i class="sand"></i><i class="weed" style="left:6%"></i><i class="weed" style="left:15%;height:30px;animation-delay:.2s"></i><i class="xtal" style="right:6%"></i>${bubbles}${t.j.map(j=>`<div class="jelly sp-${j.sp}${sel&&sel.jid===j.id?' sel':''}${j.dye?' dyeing':''}${(j.fed||0)>=2&&known('breed')?' ready':''}${(j.fast||0)>=3&&known('prey')?' hungry':''}" ${j.dye?`style="--dye:${SP[j.dye].c}"`:''} data-id="${j.id}" data-tank="${t.id}" data-sp="${j.sp}" ></div>`).join('')}</div>
+    return`<article class="tank mapt sz-${t.size}" data-tid="${t.id}" style="grid-column:${t.pos.c+1}/span ${S.slot};grid-row:${t.pos.r+1}"><div class="tank-h"><span><i class="led ${t.on?'on':''}"></i>T${String(t.id).padStart(2,'0')}<small class="tsz"> ${S.n}</small></span><span class="tank-hr"><span class="num">${n}/${S.cap}</span><button class="btn xs" data-act="send" data-id="${t.id}" ${n?'':'disabled'} aria-label="해파리 보내기"><span class="sl">보내기</span><span class="ss">↗</span></button></span></div>
+    <div class="water" data-tid="${t.id}" ><i class="feeder ${t.on?'on':''}" style="--fc:${t.food?CUBE[t.food].c:'#fff'}"><i></i><i></i></i><i class="sand"></i><i class="weed" style="left:6%"></i><i class="weed" style="left:15%;height:30px;animation-delay:.2s"></i><i class="xtal" style="right:6%"></i>${bubbles}${t.j.map(j=>`<div class="jelly sp-${j.sp}${sel&&sel.jid===j.id?' sel':''}${j.dye?' dyeing':''}${(j.fed||0)>=2&&known('breed')?' ready':''}${(j.fast||0)>=3&&known('prey')?' hungry':''}" ${j.dye?`style="--dye:${SP[j.dye].c}"`:''} data-id="${j.id}" data-tank="${t.id}" data-sp="${j.sp}" ></div>`).join('')}</div>
     <div class="tank-meta">${known('breed')?`<span>교배 준비 <b class="num" style="color:#ff9bb4;font-weight:400">${ready}</b>마리</span>`:''}<span ${maxF>=3?'style="color:var(--danger)"':''}>굶는 개체 <b class="num" style="font-weight:400">${hungry.length}</b>마리${hungry.length?` · 최장 ${maxF}일`:''}</span>${n>=S.cap?'<span>정원 가득</span>':''}</div>
-    <div class="tank-ctrl"><select data-tank="${t.id}" id="food-${t.id}" aria-label="수조 #${t.id} 먹이"><option value="">먹이 선택</option>${Object.keys(CUBE).map(k=>`<option value="${k}" ${t.food===k?'selected':''}>${CUBE[k].n} (${G.cubes[k]})</option>`).join('')}</select>
-    <button class="btn sm toggle ${t.on?'on':''}" data-act="toggle" data-id="${t.id}"><i class="dot"></i>배식 ${t.on?'ON':'OFF'}</button></div></article>`}).join('')
-    +Array.from({length:Math.max(0,(G.slots||3)-usedSlots())},()=>`<div class="slot-empty" data-act="van"><b>빈 자리</b><small>월요일 본사 밴에서 수조 대여</small></div>`).join('')
-    +((G.slots||3)<MAXSLOT?`<div class="slot-locked" data-act="van"><b>확장 공사 필요 · +3칸</b><small>월요일 본사 밴에서 ${EXPCOST[((G.slots||3)-3)/3]}Ⓜ</small></div>`:'');
+    <div class="tank-ctrl"><button class="btn sm feedchip ${t.on?'on':''}" data-act="feed" aria-label="TANK-${String(t.id).padStart(2,'0')} 먹이 설정"><i class="dot"></i>${t.food?cubeI(t.food):''}<span class="fct">${t.food?CUBE[t.food].n.replace(' 큐브',''):'먹이 없음'} · ${t.on?'ON':'OFF'}</span></button></div></article>`}).join('');
+  const el=$('#tanks');el.style.width='';el.style.height='';el.style.zoom='';
+  el.innerHTML=`<div class="mwall"><i class="rd monitor" style="left:4%"></i><i class="rd micro" style="left:18%"></i><i class="rd flask f1" style="left:26%"></i><i class="rd flask f2" style="left:31%"></i><i class="mcab" style="left:46%"></i><i class="rd flask f3" style="left:62%"></i><span class="wall-sign">B3 배양 연구실</span></div>
+    <div class="mgrid" style="grid-template-rows:repeat(${rows},var(--ch))">${cells}${tanks}</div>
+    <div class="mfloor"><i class="robot"></i><i class="drain"></i><button class="hatch ${huntDone()?'done':''}" data-act="huntGo" aria-label="해파리 동굴 입구"><i></i><span>${huntDone()?'다음 월요일 개방':'해파리 동굴 입구'}</span></button></div>`;
   $('#slotInfo').textContent=`작업실 ${usedSlots()}/${G.slots||3}칸`;
+  {const hb=$('#huntBtn');if(hb){const went=huntDone();hb.disabled=went;hb.textContent=went?'이번 주 완료':'동굴 토벌';hb.classList.toggle('hot',!went&&stuck())}}
   placeJellies(true);
-  if(sel&&!$('#jpop').hidden){const el=document.querySelector(`.jelly[data-id="${sel.jid}"]`);if(el)showJPop(sel.jid,el);else{sel=null;hideJPop()}}
+  if(sel&&!$('#jpop').hidden){const e2=document.querySelector(`.jelly[data-id="${sel.jid}"]`);if(e2)showJPop(sel.jid,e2);else{sel=null;hideJPop()}}
 }
 function renderCoach(){
   let s=null;const f=G.flags;
-  if(!f.fedOnce)s='① 수조 아래에서 먹이를 <b style="color:var(--text)">그레이 큐브</b>로 고르고 배식을 켜세요. 해파리 1마리당 하루 큐브 1개를 먹습니다.';
+  if(!f.fedOnce)s='① 수조실 지도 위 [먹이 공급] 버튼에서 <b style="color:var(--text)">그레이 큐브</b>를 고르고 배식을 켜세요. 해파리 1마리당 하루 큐브 1개를 먹습니다.';
   else if(!f.ordered&&G.tanks.some(t=>t.j.length&&(!t.food||G.cubes[t.food]<t.j.length)))s='큐브가 모자라요! 이대로면 해파리들이 굶습니다. 먹이 창고의 [먹이 배송 신청]으로 우주용달을 부르면 다음 날 08:00에 큐브가 도착해요.';
   else if(!f.dispatched)s='② 본사가 시식용 우해옹 샘플 6알을 넣어 줬어요. 12:00 전에 상단 푸드트럭 상태창(또는 작업장의 [푸드트럭 배차])을 눌러 배차하세요. 19:00에 손님 반응과 함께 정산됩니다.';
-  else if(!f.cooked)s=!f.harvested?'③ 해파리 한 마리를 눌러 [건져서 작업장으로]를 고르거나, 오른쪽 "작업장으로 보내기" 칸으로 끌어 놓으세요. 두 마리는 남겨 둬야 계속 늘어나요.':'③ [작업장] 탭에서 원재료 해파리를 누르면 고압 가마솥에 들어가요. 2시간 뒤 우해옹 3알이 됩니다.';
+  else if(!f.cooked)s=!f.harvested?'③ 해파리 한 마리를 눌러 [건져서 작업장으로]를 고르거나, 오른쪽 "작업장으로 보내기" 칸으로 끌어 놓으세요. 두 마리는 남겨 둬야 계속 늘어나요.':'③ [작업장] 탭에서 냉장고의 해파리를 빈 가마솥으로 끌어다 넣으세요. 2시간 뒤 완성되면 솥을 캡슐로 끌어 꺼냅니다.';
   else if(!f.bred)s='④ 본사에서 이틀 먹이고 보낸 해파리라 오늘 밤 자정에 첫 증식이 일어나요. 어떻게 해야 또 늘어나는지는 지켜보며 알아내세요. 해파리를 누르면 최근 기록을 볼 수 있어요. [다음 아침]으로 밤을 건너뛸 수 있어요.';
   else if(!f.dark&&G.flags.brokerMet&&G.cash<0)s='⑤ 잔고가 마이너스인 동안에는 매일 24:00, 감시 위성이 꺼지면 안드로이드 브로커가 접속을 시도합니다. 브로커가 무엇을 원하는지는 직접 알아내세요.';
-  $('#coach').hidden=!s||coachOff;if(s)$('#coachText').innerHTML=s;
+  G.coachS=s;if(!s||coachOff){$('#coach').hidden=true;return}
+  if(s!==lastCoach){lastCoach=s;$('#coachText').innerHTML=s;$('#coach').hidden=false;clearTimeout(coachT);coachT=setTimeout(()=>$('#coach').hidden=true,10000)}
 }
-function renderAll(){renderHeader();renderLeft();renderRight();renderSide();renderTanks();renderCoach();maybeAskHunt();saveSoon()}
+let lastCoach=null,coachT=0;
+function flyOng(){if(!G.popQ||!G.popQ.length)return;const q=G.popQ;G.popQ=[];if(curTab!=='kit'||RM)return;const b=$('#ongStore');if(!b)return;const rb=b.getBoundingClientRect();
+  q.forEach((it,k)=>{const sp=it.sp||it,a=document.querySelector(`.pot-st[data-pot="${it.from||0}"]`);if(!a)return;const ra=a.getBoundingClientRect();for(let i=0;i<3;i++){const im=document.createElement('img');im.src=SP[sp].o;im.className='flyong';document.body.appendChild(im);
+    const x0=ra.left+ra.width/2-12,y0=ra.top+20,x1=rb.left+rb.width/2-12,y1=rb.top+30;im.style.left=x0+'px';im.style.top=y0+'px';
+    const an=im.animate([{transform:'translate(0,0)'},{transform:`translate(${(x1-x0)/2}px,${Math.min(y1,y0)-y0-60}px) scale(1.3)`},{transform:`translate(${x1-x0}px,${y1-y0}px)`}],{duration:600,delay:(k*3+i)*80,easing:'ease-in-out',fill:'both'});an.onfinish=()=>im.remove();setTimeout(()=>im.remove(),(k*3+i)*80+900)}})}
+function renderAll(){renderHeader();renderLeft();renderRight();renderSide();renderTanks();renderCoach();maybeAskHunt();saveSoon();flyOng()}
 
 /* jelly motion */
 const jIndex=()=>{const m=new Map();G.tanks.forEach(t=>t.j.forEach(j=>m.set(j.id,j)));return m};
 const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
 let last=performance.now(),jm=new Map();
 function placeJellies(rebuild){if(rebuild)jm=jIndex();
-  document.querySelectorAll('.water').forEach(w=>{const W=w.clientWidth-40,H=w.clientHeight-58;w.querySelectorAll('.jelly').forEach(el=>{const j=jm.get(+el.dataset.id);if(j)el.style.transform=`translate(${(j.x*W)|0}px,${(j.y*H)|0}px)`})})}
+  document.querySelectorAll('.water').forEach(w=>{const f=w.querySelector('.jelly');const W=w.clientWidth-(f?f.offsetWidth:40),H=w.clientHeight-(f?f.offsetHeight:56)-6;w.querySelectorAll('.jelly').forEach(el=>{const j=jm.get(+el.dataset.id);if(j)el.style.transform=`translate(${(j.x*W)|0}px,${(j.y*H)|0}px)`})})}
 function anim(now){const dt=Math.min(50,now-last);last=now;
   if(G&&!RM){jm.forEach(j=>{j.vy+=.0000032*dt;if(Math.random()<.0009*dt)j.vy=-.0042-Math.random()*.002;j.vy*=.995;j.x+=j.vx*dt*.06;j.y+=j.vy*dt*.06;
     if(j.x<0){j.x=0;j.vx=Math.abs(j.vx)}if(j.x>1){j.x=1;j.vx=-Math.abs(j.vx)}if(j.y<0){j.y=0;j.vy=Math.abs(j.vy)*.3}if(j.y>1){j.y=1;j.vy=-.004}});placeJellies(false)}
@@ -964,31 +1316,67 @@ setInterval(()=>document.body.classList.toggle('fr1'),420);
 setInterval(()=>{if(RM)return;const js=document.querySelectorAll('.jelly:not(.blink)');if(!js.length)return;for(let i=0;i<Math.max(1,js.length/6);i++){const el=js[Math.floor(Math.random()*js.length)];el.classList.add('blink');setTimeout(()=>el.classList.remove('blink'),170)}},700);
 
 /* clock */
-setInterval(()=>{if(!G||paused||G.over||!$('#modal').hidden||HN)return;for(let i=0;i<speed;i++){stepMinute();if(G.over||!$('#modal').hidden)break}renderHeader();renderPotProg();if(dirty){dirty=false;renderAll()}},250);
+setInterval(()=>{if(!G||paused||G.over||!$('#modal').hidden||HN||(jd&&jd.moved)||(kd&&kd.moved))return;for(let i=0;i<speed;i++){stepMinute();if(G.over||!$('#modal').hidden)break}renderHeader();renderPotProg();if(dirty){dirty=false;renderAll()}},250);
 
 /* modals */
 function modal(html){const m=$('#modal');m.innerHTML=html;m.hidden=false}
-function showVan(){
+function queueModal(html){if($('#modal').hidden)modal(html);else (G.mq=G.mq||[]).push(html)}
+function showNightReport(){const r=G.rep||[];if(!r.some(x=>x.chg))return;
+  queueModal(`<section class="card"><header class="card-h"><span>밤사이 수조 변화 · Sol ${G.sol}</span><span class="pill live">시간 정지</span></header>
+  <div class="rows">${r.filter(x=>!x.warn).map(x=>`<div class="rep ${x.bad||x.warn?'bad':''} ${x.hyb?'hyb':''}">${x.sp?`<span class="rep-i sp-${x.sp}"></span>`:'<span class="rep-i warn">!</span>'}<span>${x.txt}</span></div>`).join('')}</div>
+  <button class="btn hot" data-act="closeModal">확인</button></section>`)}
+/* ---------- 장바구니: 수량 조절 → 합계 확인 → 확정 ---------- */
+let CART={ctx:'',q:{}};
+function cartOpen(ctx){if(CART.ctx!==ctx)CART={ctx,q:{}}}
+const cq=k=>CART.q[k]||0;
+function stepper(k,max){const q=cq(k);return`<span class="stp"><button class="btn xs" data-act="cq" data-id="${k}" data-d="-1" ${q<=0?'disabled':''} aria-label="빼기">−</button><b class="num">${q}</b><button class="btn xs" data-act="cq" data-id="${k}" data-d="1" ${q>=max?'disabled':''} aria-label="더하기">+</button></span>`}
+const TANKOF={ts:'s',tm:'m',tl:'l'};
+function vanItems(){const it=Object.entries(SHOP).map(([k,x])=>({k,n:x.n,p:x.p,icon:x.cube?cubeI(x.cube):x.sp?`<span class="mini-sp" style="background-image:url(${SP[x.sp].f0})"></span>`:`<i class="cube" style="background:var(--water);border-color:var(--glass)"></i>`,jel:x.sp?(k==='jg6'?6:1):0,slot:TANKOF[k]?SIZES[TANKOF[k]].slot:0,run:x.f}));
+  const sl=G.slots||3;if(sl<MAXSLOT)it.push({k:'exp',n:`작업실 확장 +3칸 (${sl} → ${sl+3})`,p:EXPCOST[(sl-3)/3],icon:'<i class="cube" style="background:var(--edge2);border-color:var(--muted)"></i>',one:1,run:()=>{G.slots=sl+3;return true}});
+  const lv=G.truckLv||0;if(lv<UPCOST.length)it.push({k:'up',n:`푸드트럭 개조 (적재 ${CAPS[lv]} → ${CAPS[lv+1]}알)`,p:UPCOST[lv],icon:`<img class="sprite" src="${TRK}" alt="" style="width:30px;height:13px">`,one:1,run:()=>{G.truckLv=lv+1;return true}});
+  G.tanks.forEach(t=>{const S=SIZES[t.size];it.push({k:'rm'+t.id,rm:t.id,rslot:S.slot,n:`TANK-${String(t.id).padStart(2,'0')} ${S.n} 철거${t.j.length?` (해파리 ${t.j.length}마리 → 동결 보관)`:''}`,p:RMCOST[t.size],icon:'<i class="cube" style="background:var(--danger);border-color:#ffb3bc"></i>',one:1,
+    run:()=>{const i=G.tanks.findIndex(x=>x.id===t.id);if(i<0||G.tanks.length<=1)return false;const x=G.tanks.splice(i,1)[0];G.frozen=(G.frozen||[]).concat(x.j.map(j=>{delete j.dye;return j}));return true}})});
+  it.forEach(x=>x.tab=(x.slot||x.k==='exp'||x.rm)?'tank':'sup');
+  return it}
+function cartTotal(items){return items.reduce((a,x)=>a+cq(x.k)*x.p,0)}
+function vanMax(x,items){const tot=cartTotal(items)-cq(x.k)*x.p;let m=Math.floor((G.cash+LIMIT-tot)/x.p);
+  if(x.one)m=Math.min(m,1);
+  if(x.rm){const others=items.filter(y=>y.rm&&y.k!==x.k&&cq(y.k)).length;if(others>=G.tanks.length-1)m=0}
+  if(x.jel){const free=G.tanks.filter(t=>!cq('rm'+t.id)).reduce((a,t)=>a+SIZES[t.size].cap-t.j.length,0),used=items.filter(y=>y.jel&&y.k!==x.k).reduce((a,y)=>a+cq(y.k)*y.jel,0);m=Math.min(m,Math.floor((free-used)/x.jel))}
+  if(x.slot){const free=(G.slots||3)-usedSlots()+items.filter(y=>y.rm&&cq(y.k)).reduce((a,y)=>a+y.rslot,0),used=items.filter(y=>y.slot&&y.k!==x.k).reduce((a,y)=>a+cq(y.k)*y.slot,0);m=Math.min(m,Math.floor((free-used)/x.slot))}
+  if(!x.one&&!x.jel&&!x.slot)m=Math.min(m,99);return Math.max(0,m)}
+function cartRow(x,max,unit){return`<div class="crow"><span class="it">${x.icon}<span>${x.n}<small class="muted"> · ${x.p}${unit}</small></span></span>${stepper(x.k,max)}</div>`}
+let vanTab='sup';
+function showVan(tab){if(tab)vanTab=tab;cartOpen('van');const items=vanItems(),tot=cartTotal(items),after=G.cash-tot,ok=tot>0,shown=items.filter(x=>x.tab===vanTab);
   modal(`<section class="card van here"><header class="card-h"><span>본사 자재 공급 밴 도착</span><span class="pill live">시간 정지</span></header>
   <div class="truck-stage"><img class="sprite van-img" src="${VAN}" alt=""><p style="margin:0;font-size:14px;${G.vanBad?'color:var(--danger)':''}">${G.vanMsg||'정품 큐브와 수조는 본사 밴에서만 발주할 수 있습니다.'}</p></div>
-  <div class="row" style="grid-template-columns:1fr auto"><span>잔고</span><b class="num" style="color:${G.cash<0?'var(--danger)':'var(--yolk)'};font-weight:400">${won(G.cash)} Ⓜ</b></div>
-  <div class="rows">${Object.entries(SHOP).map(([k,it])=>`<div class="row"><span class="it">${it.cube?cubeI(it.cube):it.sp?`<span style="width:20px;height:20px;flex:none;background:url(${SP[it.sp].f0}) center/contain no-repeat;image-rendering:pixelated"></span>`:`<i class="cube" style="background:var(--water);border-color:var(--glass)"></i>`}${it.n}</span><span class="num">${it.p}</span><button class="btn sm" data-act="buy" data-id="${k}" ${G.cash-it.p<-LIMIT?'disabled':''}>발주</button></div>`).join('')}</div>
-  <div class="muted">작업실 확장 · 현재 ${usedSlots()}/${G.slots||3}칸 사용</div>
-  ${(G.slots||3)<MAXSLOT?(()=>{const c=EXPCOST[((G.slots||3)-3)/3];return`<div class="row"><span class="it"><i class="cube" style="background:var(--edge2);border-color:var(--muted)"></i>확장 공사 +3칸 (${G.slots||3} → ${(G.slots||3)+3})</span><span class="num">${c}</span><button class="btn sm" data-act="expand" ${G.cash-c<-LIMIT?'disabled':''}>공사</button></div>`})():'<div class="muted">최대 확장 완료 (12칸)</div>'}
-  <div class="muted">푸드트럭 개조</div>
-  ${(G.truckLv||0)<UPCOST.length?`<div class="row"><span class="it"><img class="sprite" src="${TRK}" alt="" style="width:36px;height:16px">적재 ${capT()} → ${CAPS[(G.truckLv||0)+1]}알</span><span class="num">${UPCOST[G.truckLv||0]}</span><button class="btn sm" data-act="upTruck" ${G.cash-UPCOST[G.truckLv||0]<-LIMIT?'disabled':''}>개조</button></div>`:'<div class="muted">최대 개조 완료 (적재 80알)</div>'}
-  <button class="btn hot" data-act="vanClose">밴 보내고 영업 재개</button></section>`)}
-function showBM(){const want=BM_WANT.filter(k=>G.ong[k]>0);
+  <div class="htabs"><button class="btn sm ${vanTab==='sup'?'on':''}" data-act="vanTab" data-id="sup">자재 발주</button><button class="btn sm ${vanTab==='tank'?'on':''}" data-act="vanTab" data-id="tank">수조 배치</button></div>
+  <div class="muted">${vanTab==='tank'?`작업실 ${usedSlots()}/${G.slots||3}칸 사용 · 설치비와 철거비는 한 번만, 렌트비는 매주 월요일`:`수조 빈자리 ${G.tanks.reduce((a,t)=>a+SIZES[t.size].cap-t.j.length,0)}마리`}</div>
+  <div class="rows">${shown.map(x=>cartRow(x,vanMax(x,items),'Ⓜ')).join('')}</div>
+  ${vanTab==='tank'?'<p class="muted" style="margin:0">철거를 담으면 그만큼 칸이 비어 같은 발주에서 다른 수조를 설치할 수 있어요. 철거한 수조의 해파리는 동결 보관함으로 갑니다.</p>':''}
+  <div class="cart-sum"><span>합계 <b class="num">${won(tot)}Ⓜ</b> <small class="muted">(두 탭 합산)</small></span><span>발주 후 잔고 <b class="num" style="color:${after<0?'var(--danger)':'var(--yolk)'}">${won(after)}Ⓜ</b></span></div>
+  <div class="btn-row"><button class="btn hot" data-act="cartOk" ${ok?'':'disabled'}>발주 확정</button><button class="btn" data-act="cartClear" ${ok?'':'disabled'}>비우기</button></div>
+  <button class="btn" data-act="vanClose">밴 보내고 영업 재개</button></section>`)}
+function bmBuyItems(){return Object.entries(BM).map(([k,x])=>({k:'b_'+k,n:x.n,p:x.p,jel:x.sp?1:0,icon:x.cube?cubeI(x.cube):`<span class="mini-sp" style="background-image:url(${SP[x.sp].f0});filter:drop-shadow(0 0 3px var(--toxic))"></span>`,run:x.f}))}
+function showBM(){cartOpen('bm');const want=BM_WANT.filter(k=>G.ong[k]>0),buy=bmBuyItems();
+  const sellGot=want.reduce((a,k)=>a+cq('s_'+k)*Math.round(SP[k].price*1.8),0);
+  const buyTot=buy.reduce((a,x)=>a+cq(x.k)*x.p,0),dAfterSell=G.dark+sellGot;
+  const buyMax=x=>{let m=Math.floor((G.dark-(buyTot-cq(x.k)*x.p))/x.p);if(x.jel){const free=G.tanks.reduce((a,t)=>a+SIZES[t.size].cap-t.j.length,0)-buy.filter(y=>y.jel&&y.k!==x.k).reduce((a,y)=>a+cq(y.k),0);m=Math.min(m,free)}return Math.max(0,Math.min(m,99))};
+  const lq=cq('l');const lAmt=Math.min(lq*10,G.dark),lCash=Math.floor(lAmt*G.bmRate),after=G.cash+lCash;
   modal(`<section class="card bm"><header class="card-h"><span>암시장 · 안드로이드 브로커 BRK-7</span><span class="pill warn">시간 정지</span></header>
   <p class="broker"><small>BRK-7 ▸</small> ${G.bmLine}</p>
-  <div class="muted" style="color:#d9b8ff">스캔된 거래 가능 품목</div>
-  <div class="rows">${want.length?want.map(k=>`<div class="row"><span class="it">${ongI(k)}${SP[k].n} 우해옹</span><span class="num">×${G.ong[k]}</span><span class="num" style="color:var(--toxic)">${Math.round(SP[k].price*1.8)} d-Ⓜ</span></div>`).join(''):'<div class="muted">넘길 물건이 남지 않았습니다.</div>'}</div>
-  <button class="btn tox" data-act="bmSell" ${want.length?'':'disabled'}>전부 넘기기</button>
+  <div class="muted" style="color:#d9b8ff">넘길 우해옹</div>
+  <div class="rows">${want.length?want.map(k=>`<div class="crow"><span class="it">${ongI(k)}<span>${SP[k].n} 우해옹 <small class="muted">보유 ${G.ong[k]} · ${Math.round(SP[k].price*1.8)} d-Ⓜ</small></span></span>${stepper('s_'+k,G.ong[k])}</div>`).join(''):'<div class="muted">넘길 물건이 남지 않았습니다.</div>'}</div>
+  ${want.length?`<div class="btn-row"><button class="btn sm" data-act="cqAll">전부 담기</button><button class="btn tox" data-act="bmSellOk" ${sellGot?'':'disabled'}>넘기기 확정 (+${sellGot} d-Ⓜ)</button></div>`:''}
   <div class="row" style="grid-template-columns:1fr auto"><span>다크 마스</span><b class="num" style="color:var(--toxic);font-weight:400">${won(G.dark)} d-Ⓜ</b></div>
-  <div class="rows">${Object.entries(BM).map(([k,it])=>`<div class="row"><span class="it">${it.cube?cubeI(it.cube):`<span style="width:20px;height:20px;flex:none;background:url(${SP[it.sp].f0}) center/contain no-repeat;image-rendering:pixelated;filter:drop-shadow(0 0 3px var(--toxic))"></span>`}${it.n}</span><span class="num">${it.p} d-Ⓜ</span><button class="btn sm tox" data-act="bm" data-id="${k}" ${G.dark<it.p?'disabled':''}>입수</button></div>`).join('')}</div>
+  <div class="muted" style="color:#d9b8ff">입수</div>
+  <div class="rows">${buy.map(x=>cartRow(x,buyMax(x),' d-Ⓜ')).join('')}</div>
+  <div class="cart-sum"><span>합계 <b class="num">${buyTot} d-Ⓜ</b></span><span>남는 다크 마스 <b class="num" style="color:var(--toxic)">${won(G.dark-buyTot)}</b></span></div>
+  <button class="btn tox" data-act="bmBuyOk" ${buyTot?'':'disabled'}>입수 확정</button>
   <div class="duebox" style="border-color:var(--toxic)"><span>오늘 밤 세탁 환율<br><small class="muted">밤마다 55~85% 사이로 바뀝니다</small></span><b class="num" style="color:var(--toxic)">${Math.round(G.bmRate*100)}%</b></div>
-  <div class="btn-row">${[20,100].map(a=>`<button class="btn sm tox" data-act="launder" data-id="${a}" ${G.dark?'':'disabled'}>${a} d-Ⓜ 세탁</button>`).join('')}<button class="btn sm tox" data-act="launder" data-id="all" ${G.dark?'':'disabled'}>전액 세탁</button></div>
-  ${G.dark?(()=>{const after=G.cash+Math.floor(G.dark*G.bmRate);return`<p class="muted" style="margin:0;${after>=0?'color:var(--yolk)':''}">전액 세탁하면 잔고 ${won(G.cash)} → ${won(after)} Ⓜ${after>=0?' · 잔고가 플러스가 되면 다음 밤부터 브로커가 연락하지 않습니다. 남은 다크 마스는 다시 마이너스가 될 때까지 묶여요.':''}</p>`})():''}
+  <div class="crow"><span>세탁할 다크 마스 <small class="muted">(10 단위)</small></span>${stepper('l',Math.ceil(G.dark/10))}</div>
+  ${G.dark?`<p class="muted" style="margin:0;${after>=0?'color:var(--yolk)':''}">${lAmt} d-Ⓜ 세탁 → 현금 +${lCash}Ⓜ · 잔고 ${won(G.cash)} → ${won(after)}Ⓜ${after>=0?' · 잔고가 플러스가 되면 브로커가 연락하지 않습니다.':''}</p>`:''}
+  <button class="btn tox" data-act="launderOk" ${lAmt?'':'disabled'}>세탁 확정</button>
   <button class="btn" data-act="bmClose">거래 끝내기</button></section>`)}
 function showBroke(){
   modal(`<section class="card bm"><header class="card-h"><span>암시장 · 안드로이드 브로커 BRK-7</span></header>
@@ -1002,36 +1390,83 @@ function showVanStatus(){const dow=(G.sol-1)%7,next=dow===0&&G.m<480?'오늘 08:
   <div class="duebox"><span>다음 정기 방문 · 렌트비 징수<br><small class="muted">${next}</small></span><b class="num">${d.total} Ⓜ</b></div>
   <button class="btn hot" data-act="delivery">먹이 배송 신청 (우주용달)</button>
   <button class="btn" data-act="closeModal">닫기</button></section>`)}
-function showDelivery(){const d=G.delivery,arr=d?d.arrive:((G.m<480?G.sol-1:G.sol)*DAY+480),arrSol=Math.floor(arr/DAY)+1;
+function showDelivery(){cartOpen('dlv');const d=G.delivery,arr=d?d.arrive:((G.m<480?G.sol-1:G.sol)*DAY+480),arrSol=Math.floor(arr/DAY)+1;
+  const items=Object.entries(DLVPRICE).map(([k,c])=>({k,n:`${CUBE[k].n} ×${DLVPACK}`,p:c,icon:cubeI(k)})),tot=cartTotal(items),after=G.cash-tot;
+  const mx=x=>Math.max(0,Math.min(99,Math.floor((G.cash+LIMIT-(tot-cq(x.k)*x.p))/x.p)));
   modal(`<section class="card"><header class="card-h"><span>우주용달 먹이 배송</span><span class="pill live">시간 정지</span></header>
   <img class="sprite van-img" src="${DLV}" alt="" style="width:84px;height:48px">
   <p style="margin:0">주문하면 Sol ${arrSol} 08:00에 포탈 창고로 배송됩니다. 도착 전까지 주문을 더 얹을 수 있어요.</p>
-  <div class="row" style="grid-template-columns:1fr auto"><span>잔고</span><b class="num" style="color:${G.cash<0?'var(--danger)':'var(--yolk)'};font-weight:400">${won(G.cash)} Ⓜ</b></div>
-  <div class="rows">${Object.entries(DLVPRICE).map(([k,c])=>`<div class="row"><span class="it">${cubeI(k)}${CUBE[k].n} ×${DLVPACK}</span><span class="num">${c}</span><button class="btn sm" data-act="dlvOrder" data-id="${k}" ${G.cash-c<-LIMIT?'disabled':''}>주문</button></div>`).join('')}</div>
-  ${d?`<div class="duebox"><span>배송 예정</span><b class="num" style="color:var(--yolk)">${Object.entries(d.items).map(([k,n])=>CUBE[k].n+' ×'+n).join(', ')}</b></div>`:''}
-  <button class="btn" data-act="closeModal">닫기</button></section>`)}
+  <div class="rows">${items.map(x=>cartRow(x,mx(x),'Ⓜ')).join('')}</div>
+  <div class="cart-sum"><span>큐브 <b class="num">${items.reduce((a,x)=>a+cq(x.k)*DLVPACK,0)}개</b> · 합계 <b class="num">${tot}Ⓜ</b></span><span>주문 후 잔고 <b class="num" style="color:${after<0?'var(--danger)':'var(--yolk)'}">${won(after)}Ⓜ</b></span></div>
+  ${d?`<div class="duebox"><span>이미 배송 예정</span><b class="num" style="color:var(--yolk)">${Object.entries(d.items).map(([k,n])=>CUBE[k].n+' ×'+n).join(', ')}</b></div>`:''}
+  <div class="btn-row"><button class="btn hot" data-act="cartOk" ${tot?'':'disabled'}>주문 확정</button><button class="btn" data-act="closeModal">닫기</button></div></section>`)}
 function showTruckAsk(){const n=sum(planLoad());
   modal(`<section class="card"><header class="card-h"><span>푸드트럭이 비어 있어요</span><span class="pill warn">11:00</span></header>
   <img class="sprite truck-img" src="${TRK}" alt="">
   ${n?`<p style="margin:0">푸드트럭이 아직 도킹 베이에 있습니다. 12:00가 지나면 오늘은 배차할 수 없어요. 이대로 아무도 안 보낼까요?</p><p class="muted" style="margin:0">지금 보내면 우해옹 ${n}알이 실립니다.</p>
-  <button class="btn hot" data-act="dispatch">지금 배차 출발</button>`
+  <button class="btn hot" data-act="dispatch">비싼 순으로 바로 출발</button><button class="btn" data-act="tkPick">골라서 싣기</button>`
   :`<p style="margin:0">실을 우해옹이 없어 트럭이 비어 있습니다. 12:00 전에 가마솥에서 졸여 실을 수도 있어요. 이대로 아무도 안 보낼까요?</p>`}
   <button class="btn" data-act="truckRest">오늘은 쉰다</button></section>`)}
+function truckLoad(){if(CART.ctx!=='trk')return planLoad();const p={};let n=0;for(const k in CART.q){const v=Math.min(CART.q[k]||0,G.ong[k]||0,capT()-n);if(v>0&&!BM_WANT.includes(k)){p[k]=v;n+=v}}CART={ctx:'',q:{}};return p}
 function planLoad(){const p={};let n=0;Object.keys(G.ong).filter(k=>!BM_WANT.includes(k)).sort((a,b)=>SP[b].price-SP[a].price).forEach(sp=>{const k=Math.min(G.ong[sp],capT()-n);if(k>0){p[sp]=k;n+=k}});return p}
 function marketRows(){const ks=Object.keys(MENU).filter(k=>!BM_WANT.includes(k)&&(G.codex&&G.codex.sp[k]));
   return`<div class="mkt">${ks.map(k=>{const m=mkt(k),[lab,col]=mktLabel(m.d),ar=m.d>m.prev+.02?'▲':m.d<m.prev-.02?'▼':'–';return`<span class="it">${ongI(k)}${MENU[k].m}</span><i style="color:${ar==='▲'?'var(--ok)':ar==='▼'?'var(--danger)':'var(--muted)'}">${ar}</i><span style="color:${col}">${lab}</span>`}).join('')}</div>`}
 function cargoRows(c){return Object.entries(c).map(([sp,n])=>`<div class="row"><span class="it">${ongI(sp)}${MENU[sp].m}</span><span class="num">×${n}</span><span class="num muted">~${SP[sp].price}</span></div>`).join('')}
 function showTruck(){const tr=G.truck;let body;
   if(tr.out)body=`<p style="margin:0">화성 돔 상공에서 영업 중입니다. 19:00에 운행 영수증과 함께 돌아와요.</p><div class="rows">${cargoRows(tr.cargo)}</div>`;
-  else{const pl=planLoad(),n=sum(pl),ok=G.m>=360&&G.m<720;
-    body=`<p class="muted" style="margin:0">배차하면 창고의 우해옹이 비싼 것부터 ${capT()}개까지 자동으로 실립니다.</p>${BM_WANT.some(k=>G.ong[k]>0)?'<p class="muted" style="margin:0;color:#d9b8ff">네온사인·사이버 노이즈 우해옹은 일반 판매가 금지돼 트럭에 싣지 않습니다.</p>':''}
-    <div class="rows">${n?cargoRows(pl):'<div class="muted">창고에 우해옹이 없어요. 해파리를 가마솥에 졸여 보세요.</div>'}</div>
-    <div class="muted">오늘의 시장 반응</div>${marketRows()}
-    <div class="row" style="grid-template-columns:1fr auto"><span>적재 예정</span><b class="num" style="font-weight:400">${n} / ${capT()}</b></div>
+  else{if(CART.ctx!=='trk'){CART={ctx:'trk',q:planLoad()}}const ok=G.m>=360&&G.m<720,cap=capT();
+    const ks=Object.keys(G.ong).filter(k=>G.ong[k]>0&&!BM_WANT.includes(k)).sort((a,b)=>SP[b].price-SP[a].price);ks.forEach(k=>{if(cq(k)>G.ong[k])CART.q[k]=G.ong[k]});
+    const n=sum(CART.q),stock=ks.reduce((a,k)=>a+G.ong[k],0);
+    const rows=ks.map(k=>{const m=mkt(k),[lab,col]=mktLabel(m.d),mx=Math.min(G.ong[k],cap-n+cq(k));return`<div class="crow trow"><span class="it">${ongI(k)}<span>${MENU[k].m}<small class="muted"> · 재고 ${G.ong[k]} · ~${SP[k].price}Ⓜ · <i style="font-style:normal;color:${col}">${lab}</i></small></span></span><span class="stp">${stepper(k,mx)}<button class="btn xs" data-act="tkAll" data-id="${k}" ${cq(k)>=mx?'disabled':''}>최대</button></span></div>`}).join('');
+    body=`${BM_WANT.some(k=>G.ong[k]>0)?'<p class="muted" style="margin:0;color:#d9b8ff">네온사인·사이버 노이즈 우해옹은 일반 판매가 금지돼 트럭에 싣지 않습니다.</p>':''}
+    ${ks.length?`<div class="btn-row"><button class="btn xs" data-act="tkAuto">비싼 순 자동</button><button class="btn xs" data-act="tkClr">비우기</button></div><div class="rows">${rows}</div>`:'<div class="muted">창고에 우해옹이 없어요. 해파리를 가마솥에 졸여 보세요.</div>'}
+    <div class="loadbar"><i style="width:${Math.round(n/cap*100)}%"></i></div>
+    <div class="row" style="grid-template-columns:1fr auto"><span>적재 ${stock>cap?`<small class="muted">(재고 ${stock}알 중 고르기)</small>`:''}</span><b class="num" style="font-weight:400">${n} / ${cap}</b></div>
     ${ok?'':`<p class="muted" style="margin:0;color:var(--danger)">배차는 아침 06:00–12:00에만 가능합니다. 지금은 ${fmt(G.m)}.</p>`}
-    <button class="btn hot" data-act="dispatch" ${ok&&n?'':'disabled'}>배차 출발</button>`}
+    <button class="btn hot" data-act="dispatch" ${ok&&n?'':'disabled'}>${n?`${n}알 싣고 배차 출발`:'실을 우해옹을 고르세요'}</button>`}
   modal(`<section class="card"><header class="card-h"><span>자율주행 플라잉 푸드트럭</span><span class="pill live">시간 정지</span></header>
   <img class="sprite truck-img" src="${TRK}" alt="">${body}<button class="btn" data-act="closeModal">닫기</button></section>`)}
+let SEND={tid:0,pick:{},dest:''};
+function showSend(tid,pre){const t=G.tanks.find(x=>x.id===tid);if(!t)return;if(SEND.tid!==tid||pre!==undefined)SEND={tid,pick:{},dest:''};if(pre)SEND.pick[pre]=1;
+  const picked=t.j.filter(j=>SEND.pick[j.id]),cols=[...new Set(t.j.map(j=>j.sp))];
+  const dests=G.tanks.filter(x=>x.id!==tid).map(x=>({k:String(x.id),n:`TANK-${String(x.id).padStart(2,'0')} ${SIZES[x.size].n}`,free:SIZES[x.size].cap-x.j.length})).concat([{k:'kit',n:'작업장 (원재료)',free:999}]);
+  const d=dests.find(x=>x.k===SEND.dest),fit=d?Math.min(d.free,picked.length):0;
+  modal(`<section class="card"><header class="card-h"><span>해파리 보내기 · TANK-${String(tid).padStart(2,'0')}</span><button class="btn sm" data-act="closeModal">닫기</button></header>
+  <div class="btn-row"><button class="btn xs" data-act="spAll">전체</button>${cols.map(c=>`<button class="btn xs" data-act="spCol" data-id="${c}">${SP[c].n}만</button>`).join('')}<button class="btn xs" data-act="spNone">선택 해제</button></div>
+  <div class="spick">${t.j.map(j=>`<button class="sp-${j.sp} ${SEND.pick[j.id]?'on':''}" data-act="spT" data-id="${j.id}" aria-label="${SP[j.sp].n} 해파리"></button>`).join('')}</div>
+  <div class="muted">${picked.length}마리 선택 · 어디로 보낼까요?</div>
+  <div class="dest">${dests.map(x=>`<button class="btn sm ${SEND.dest===x.k?'on':''}" data-act="spD" data-id="${x.k}" ${x.free<=0?'disabled':''}>${x.n}${x.k==='kit'?'':` <small>빈자리 ${x.free}</small>`}</button>`).join('')}</div>
+  ${d&&fit<picked.length?`<p class="muted" style="margin:0;color:var(--danger)">${picked.length}마리 중 ${fit}마리만 들어가요.</p>`:''}
+  <button class="btn hot" data-act="spGo" ${picked.length&&d&&fit?'':'disabled'}>${d?`${fit}마리 보내기`:'목적지를 고르세요'}</button></section>`)}
+let LAY=null;
+function showLayout(){if(!LAY)LAY={pos:Object.fromEntries(G.tanks.map(t=>[t.id,{...t.pos}])),sel:null};const rows=(G.slots||3)/3;
+  const occ={};G.tanks.forEach(t=>{const p=LAY.pos[t.id];for(let i=0;i<SIZES[t.size].slot;i++)occ[p.r+','+(p.c+i)]=t.id});
+  const selT=LAY.sel&&G.tanks.find(t=>t.id===LAY.sel);
+  const okAt=(r,c)=>{if(!selT||r>=rows)return false;const sp=SIZES[selT.size].slot;if(c+sp>MCOLS)return false;for(let i=0;i<sp;i++){const v=occ[r+','+(c+i)];if(v!==undefined&&v!==selT.id)return false}return true};
+  let cells='';for(let r=0;r<rows;r++)for(let c=0;c<MCOLS;c++){const id=occ[r+','+c];
+    if(id!==undefined){const t=G.tanks.find(x=>x.id===id),p=LAY.pos[id];if(p.c!==c)continue;const sp=SIZES[t.size].slot;
+      cells+=`<div class="ltank ${LAY.sel===id?'sel':''}" style="grid-column:${c+1}/span ${sp};grid-row:${r+1}" data-act="layT" data-id="${id}"><b style="font-weight:400">TANK-${String(id).padStart(2,'0')}</b><small>${SIZES[t.size].n} · ${t.j.length}마리</small></div>`}
+    else cells+=`<div class="lcell ${r>=rows?'lock':''} ${okAt(r,c)?'ok':''}" style="grid-column:${c+1};grid-row:${r+1}" ${r<rows?`data-act="layC" data-id="${r},${c}"`:''}>${r>=rows?'잠김':okAt(r,c)?'여기로':'빈칸'}</div>`}
+  modal(`<section class="card"><header class="card-h"><span>배치 변경</span><span class="pill">${usedSlots()}/${G.slots||3}칸</span></header>
+  <p class="muted" style="margin:0">${selT?`TANK-${String(selT.id).padStart(2,'0')}을(를) 옮길 칸을 누르세요. 초록 칸에 놓을 수 있어요.`:'옮길 수조를 누르세요. 위쪽이 A줄, 왼쪽이 1열입니다. 칸이 더 필요하면 월요일 본사 밴에서 확장 공사를 하세요.'}</p>
+  <div class="lgrid" style="grid-template-rows:repeat(${rows},auto)">${cells}</div>
+  <div class="btn-row"><button class="btn hot" data-act="layOk">배치 확정</button><button class="btn" data-act="layCancel">취소</button></div></section>`)}
+function showFeed(){
+  const need={};G.tanks.forEach(t=>{if(t.on&&t.food)need[t.food]=(need[t.food]||0)+t.j.length});
+  const kinds=Object.keys(CUBE).filter(k=>G.cubes[k]>0||need[k]||G.tanks.some(t=>t.food===k));
+  modal(`<section class="card"><header class="card-h"><span>먹이 공급 설정</span><button class="btn sm" data-act="closeModal">닫기</button></header>
+  <div class="fsum">${kinds.length?kinds.map(k=>{const n=need[k]||0,d=n?Math.floor(G.cubes[k]/n):null;return`<span class="it">${cubeI(k)}${CUBE[k].n} <b class="num" style="font-weight:400">×${G.cubes[k]}</b></span><span class="muted">하루 ${n}개</span><span class="${d!==null&&d<2?'warn':''}">${d===null?'—':d===0?'오늘 밤 부족':`${d}일분`}</span>`}).join(''):'<span class="muted">창고에 큐브가 없어요.</span>'}</div>
+  <div class="rows">${G.tanks.map(t=>{const lack=t.on&&t.food&&G.cubes[t.food]<t.j.length;return`<div class="frow"><div class="frow-h"><span>TANK-${String(t.id).padStart(2,'0')} · ${SIZES[t.size].n} <small class="muted">${t.j.length}마리 · 하루 ${t.j.length}개</small></span>
+      <button class="btn sm toggle ${t.on?'on':''}" data-act="feedTog" data-id="${t.id}"><i class="dot"></i>배식 ${t.on?'ON':'OFF'}</button></div>
+      <div class="fcubes">${Object.keys(CUBE).filter(k=>G.cubes[k]>0||t.food===k).map(k=>`<button class="btn xs ${t.food===k?'on':''}" data-act="feedSet" data-id="${t.id}:${k}">${cubeI(k)}${CUBE[k].n.replace(' 큐브','')}</button>`).join('')||'<span class="muted">고를 큐브가 없어요</span>'}</div>
+      ${lack?'<span class="muted" style="color:var(--danger)">재고가 하루치보다 적어 오늘 밤 배식이 꺼져요</span>':''}</div>`}).join('')}</div>
+  ${G.cubes.gray>0?`<button class="btn sm" data-act="feedAll" data-id="gray">모든 수조 그레이 큐브로 · 배식 ON</button>`:''}
+  <button class="btn" data-act="delivery">먹이 배송 신청 (우주용달)</button></section>`)}
+function showStarve(lines){
+  queueModal(`<section class="card"><header class="card-h"><span>먹이가 떨어졌어요</span><span class="pill warn">시간 정지</span></header>
+  <div class="rows">${lines.map(x=>`<div class="rep bad"><span class="rep-i warn">!</span><span>${x}</span></div>`).join('')}</div>
+  <p class="muted" style="margin:0">배식이 꺼진 수조는 굶기 시작해요. 4일을 넘기면 서로 잡아먹습니다.</p>
+  <div class="btn-row"><button class="btn hot" data-act="delivery">먹이 배송 신청</button><button class="btn" data-act="feed">먹이 공급 설정</button><button class="btn" data-act="closeModal">나중에</button></div></section>`)}
 function showReceipt(){const r=G.receipt;if(!r)return;
   modal(`<section class="card receipt"><header class="card-h"><span>운행 영수증 · Sol ${r.sol}</span><span>MARS ROBO-TRUCK</span></header>
   <table><thead><tr><th>품목</th><th>적재</th><th>판매</th><th>단가</th><th>금액</th></tr></thead><tbody>
@@ -1047,15 +1482,24 @@ function showCodex(){const c=G.codex||{sp:{},log:[]};const keys=Object.keys(SP);
   <h4>관찰 메모</h4>
   <div class="cx-log">${c.log.length?c.log.map(e=>`<div><time>Sol ${e.sol}</time><span>${e.t}</span></div>`).join(''):'<div class="muted">아직 기록된 조합이 없다. 뭐든 먹여 보고, 섞어 보자.</div>'}</div>
   </section>`)}
-function showHelp(){modal(`<section class="card"><header class="card-h"><span>영업 규칙</span><button class="btn sm" data-act="closeModal">닫기</button></header><div class="help">
+function rulesHtml(){return`<div class="help">
   <h3>시간</h3><p>화성 1 Sol은 24시간 40분. 매일 24:00–24:40엔 감시 위성이 꺼집니다. ${G.flags&&G.flags.brokerMet?'잔고가 마이너스일 때, 언젠가부터 가끔 밤에 안드로이드 브로커가 접속해 옵니다. 브로커는 일반 판매가 금지된 특정 우해옹만 사들이며, 원하는 물건이 없으면 바로 연결을 끊어요. 다크 마스는 세탁해야 현금이 되는데 환율이 밤마다 55~85%로 바뀌고, 세탁해서 잔고가 플러스가 되면 암시장이 닫힙니다.':''}</p>
   <h3>배식</h3><p>수조마다 먹이 1종만 고릅니다. 해파리 1마리당 하루 큐브 1개. 그레이 큐브는 월요일 본사 밴에서 사거나, 언제든 우주용달 배송을 신청하면 다음 날 08:00에 받습니다. 색깔 큐브는 정식 유통되지 않습니다.</p>
   <h3>증식 · 포식</h3><p>해파리는 잘 먹이면 늘어나고, 오래 굶기면 곤란한 일이 생깁니다. 정확한 조건은 직접 실험해 보세요. 해파리를 누르면 최근 먹은 먹이(색 점)와 굶은 날(점선 동그라미)을 볼 수 있고, 관찰한 현상은 교배연구도감에 기록되며 그때부터 상태창에 안내가 붙습니다.</p>
 <h3>교배</h3><p>본사는 교배 법칙을 알려주지 않습니다. 새로운 개체나 조합을 발견하면 교배연구도감에 기록돼요.</p>
-  <h3>유통</h3><p>트럭은 06:00–12:00에만 배차할 수 있고, 11:00까지 안 보내면 이대로 쉴지 확인합니다. 손님들은 우해옹 재료를 모르고 흑임자옹심, 밤양갱옹심, 말차옹심 같은 메뉴로 사 먹습니다. 메뉴마다 시장 반응(수요)이 매일 바뀌고, 한 메뉴를 많이 팔면 다음 날 반응이 식어요. 반응이 좋을수록 많이, 비싸게 팔립니다. 가마솥: 해파리 1마리 → 2시간 → 우해옹 3알. 회색 해파리를 12Ⓜ에 사서 졸이면 우해옹 3알(약 30Ⓜ)이 됩니다. 푸드트럭은 06:00에 창이 뜨고, 배차하면 우해옹이 비싼 순으로 30개까지 자동 적재됩니다. 19시 정산(약 80% 판매).</p>
-  <h3>작업실</h3><p>지하 작업실은 3칸에서 시작합니다. 수조는 소형 1칸, 중형 2칸, 대형 3칸을 차지하고, 월요일 본사 밴에서 확장 공사를 하면 3칸씩 늘어나요(300 · 500 · 800Ⓜ, 최대 12칸).</p>
+  <h3>유통</h3><p>트럭은 06:00–12:00에만 배차할 수 있고, 11:00까지 안 보내면 이대로 쉴지 확인합니다. 손님들은 우해옹 재료를 모르고 흑임자옹심, 밤양갱옹심, 말차옹심 같은 메뉴로 사 먹습니다. 메뉴마다 시장 반응(수요)이 매일 바뀌고, 한 메뉴를 많이 팔면 다음 날 반응이 식어요. 반응이 좋을수록 많이, 비싸게 팔립니다. 가마솥: 해파리 1마리 → 2시간 → 우해옹 3알. 푸드트럭은 06:00에 창이 뜨고, 배차 창에서 메뉴별로 몇 알씩 실을지 고릅니다(기본은 비싼 순으로 채워져 있어요). 적재량은 트럭 업그레이드로 늘어납니다. 19시 정산(약 80% 판매).</p>
+  <h3>작업실</h3><p>지하 작업실은 3칸에서 시작합니다. 수조는 소형 1칸, 중형 2칸, 대형 3칸을 차지합니다. 설치비(40·80·160Ⓜ)와 철거비(20·40·80Ⓜ)는 한 번만 내고, 렌트비는 매주 나갑니다. 월요일 본사 밴에서 확장 공사를 하면 3칸씩 늘어나요(300 · 500 · 800Ⓜ, 최대 12칸).</p>
   <h3>본사</h3><p>본사 밴은 매주 월요일 08:00에만 오며, 수조 추가 대여·회색 해파리·트럭 개조는 이때만 가능합니다. 도착 즉시 보유 수조의 주간 렌트비(소 25 · 중 50 · 대 100)를 징수합니다. 따로 갚는 빚은 없습니다. 잔고 -5,000Ⓜ에서 시작하고, 발주와 렌트비는 잔고에서 그대로 빠집니다. 다만 잔고가 -6,000Ⓜ 아래로 내려가는 주문은 막히고, 그 때문에 렌트비를 못 내면 미납이고, 2주 연속 미납이면 수조 압류, 마지막 수조를 잃으면 폐업. 잔고를 0 이상으로 만들면 빚 청산 엔딩입니다. 밴에서 푸드트럭을 개조하면 적재 한도가 30 → 50 → 80알로 늘어나요(250 · 600Ⓜ).</p>
-  </div></section>`)}
+  </div>`}
+const TUT=[['fedOnce','[먹이 공급]에서 먹이를 고르고 배식 켜기'],['dispatched','푸드트럭에 우해옹 실어 배차하기'],['harvested','해파리를 건져 작업장으로 보내기'],['cooked','고압 가마솥에 졸여 우해옹 만들기'],['bred','해파리가 늘어나는 것 지켜보기'],['ordered','우주용달로 먹이 배송받기']];
+function showHelp(tab){tab=tab||'now';const f=G.flags||{};
+  const body=tab==='now'?`<p style="margin:0;font-size:15px;line-height:1.55">${G.coachS||'지금은 따로 안내할 게 없어요. 자유롭게 영업하세요.'}</p>`
+    :tab==='tut'?`<div class="rows">${TUT.map(([k,t],i)=>`<div class="tut ${f[k]?'done':''}"><i>${f[k]?'✓':i+1}</i><span>${t}</span></div>`).join('')}</div>
+      <button class="btn sm" data-act="coachToggle">${coachOff?'안내 말풍선 다시 켜기':'안내 말풍선 끄기'}</button>`
+    :rulesHtml();
+  modal(`<section class="card"><header class="card-h"><span>도움말 <small class="muted">Sol ${G.sol} · ${DOW[(G.sol-1)%7]}요일</small></span><span class="btn-row"><button class="btn sm" data-act="codex">도감</button><button class="btn sm" data-act="closeModal">닫기</button></span></header>
+  <div class="htabs">${[['now','지금 할 일'],['tut','튜토리얼'],['rules','영업 규칙']].map(([k,n])=>`<button class="btn sm ${tab===k?'on':''}" data-act="helpTab" data-id="${k}">${n}</button>`).join('')}</div>
+  ${body}</section>`)}
 
 /* ---------- title & intro ---------- */
 function setScene(id){document.querySelectorAll('.scene').forEach(s=>s.hidden=s.id!==id)}
@@ -1068,7 +1512,7 @@ function vanScene(){setScene('sc-van');$('#vanFly').src=VAN;requestAnimationFram
   items.forEach((it,i)=>setTimeout(()=>{const s=document.createElement('span');s.innerHTML=(it[1]?`<img class="sprite ong-img" src="${it[1]}" alt="">`:'')+it[0];$('#drops').appendChild(s)},1300+i*260));
   setTimeout(()=>{$('#speech').hidden=false;$('#speech').classList.add('fade-in')},2800);
   setTimeout(()=>{$('#beginBtn').hidden=false;$('#beginBtn').classList.add('fade-in')},3300)}
-function begin(){G.raw=G.raw||[];G.slots=G.slots||Math.max(3,Math.ceil(G.tanks.reduce((a,t)=>a+SIZES[t.size].slot,0)/3)*3);G.codex=G.codex||{sp:{gray:1},log:[]};G.market=G.market||{};$('#overlay').hidden=true;mistOn=false;paused=false;speed=4;document.querySelectorAll('[data-speed]').forEach(b=>b.classList.toggle('on',b.dataset.speed==='4'));
+function begin(){potFix();if(G.tanks)G.tanks.forEach(t=>{if(!t.pos)t.pos=findSpot(t.size)||{r:0,c:0}});$('#bookImg').src=BOOK;G.raw=G.raw||[];G.slots=G.slots||Math.max(3,Math.ceil(G.tanks.reduce((a,t)=>a+SIZES[t.size].slot,0)/3)*3);G.codex=G.codex||{sp:{gray:1},log:[]};G.market=G.market||{};$('#overlay').hidden=true;mistOn=false;paused=false;setSpeed(4);
   document.body.classList.toggle('dead',G.m>=DEAD);renderAll();save();if(G.vanHere)showVan()}
 
 /* toxic mist behind logo */
@@ -1082,7 +1526,4 @@ let mistOn=true;
 if(load())$('#btnCont').hidden=false;
 G={sol:1,m:510,cash:-5000,dark:0,tanks:[],cubes:{},ong:{},pot:[],truck:{cargo:{}},flags:{},log:[]};
 </script>
-
-</body>
-</html>
-
+</body></html>

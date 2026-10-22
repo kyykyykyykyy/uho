@@ -564,6 +564,20 @@ body.dead .clock-time{color:var(--toxic);animation:glt 2.2s steps(1) infinite}
 @media (max-width:440px){.clk b{font-size:18px}.clk .sol{display:none}.cash,.darkm{font-size:15px}.cash .u{display:none}.mini-b{padding:2px 3px}.mm{width:20px;height:10px}.top{padding:5px 4px 7px;gap:4px}.top .btn.xs{padding:2px 4px;min-width:22px}.book-b img{width:18px;height:15px}}
 @media (max-width:330px){.top .book-b{display:none}.top .btn.xs{padding:2px 3px;min-width:20px}.clk .sol{display:none}.clk b{font-size:15px}.cash,.darkm{font-size:13px}.cash .u{display:none}.mm{width:18px;height:9px}.top{gap:4px}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important}}
+@media (orientation:landscape) and (max-height:520px){
+  .tabs{margin-top:6px;gap:6px}.tab{padding:4px 10px;font-size:14px;box-shadow:3px 3px 0 #000}.tab .badge{font-size:12px;padding:0 5px}
+  main.room{margin-top:8px}
+  .mwall{display:none!important}
+  #viewTank .floor-h{margin-bottom:6px}
+  .mgrid{--ch:min(calc((100cqw - 2*var(--gap))/3*1.5),calc(100vh - 120px),330px)!important}
+  .mfloor{height:46px;margin-top:6px}
+  .kit-deco{height:0!important;border-bottom:0!important;overflow:hidden}
+  .ktools{padding-top:8px}
+  .kscene{padding-top:4px!important}
+  .fridge,.caps{min-height:120px;max-height:calc(100vh - 170px)}
+  .modal{padding-block:8px}.modal .card{max-height:calc(100vh - 16px);max-width:560px}
+  .modal .truck-img{display:none}
+}
 </style>
 
 <header class="top" id="top">
@@ -1465,7 +1479,7 @@ function showFeed(){
 function showStarve(lines){
   queueModal(`<section class="card"><header class="card-h"><span>먹이가 떨어졌어요</span><span class="pill warn">시간 정지</span></header>
   <div class="rows">${lines.map(x=>`<div class="rep bad"><span class="rep-i warn">!</span><span>${x}</span></div>`).join('')}</div>
-  <p class="muted" style="margin:0">배식이 꺼진 수조는 굶기 시작해요. 4일을 넘기면 서로 잡아먹습니다.</p>
+  <p class="muted" style="margin:0">배식이 꺼진 수조는 굶기 시작해요.${known('prey')?' 4일을 넘기면 서로 잡아먹습니다.':''}</p>
   <div class="btn-row"><button class="btn hot" data-act="delivery">먹이 배송 신청</button><button class="btn" data-act="feed">먹이 공급 설정</button><button class="btn" data-act="closeModal">나중에</button></div></section>`)}
 function showReceipt(){const r=G.receipt;if(!r)return;
   modal(`<section class="card receipt"><header class="card-h"><span>운행 영수증 · Sol ${r.sol}</span><span>MARS ROBO-TRUCK</span></header>
